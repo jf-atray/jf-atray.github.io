@@ -30,9 +30,48 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minima
+
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+# Color schemes
+color-1: '#3B97D3'
+color-2: '#26B99A'
+
+# Author pictre 100x100 --> keep it inside img folder.
+author-image: 'author.jpg'
+author-name: 'John Doe' 
+author-about: 'John Doe should be described in a very few words!' 
+
+# Build settings
+markdown: kramdown
+
+sass:
+    style: compressed
+
+#compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+  
+  
+prose:
+  rooturl: ''
+  siteurl: 'http://prose.github.io/starter/'
+  relativeLinks: 'http://prose.github.io/starter/links.jsonp'
+  media: 'images'
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
 
 # Exclude from processing.
 # The following items will not be processed, by default.

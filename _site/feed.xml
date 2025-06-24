@@ -1,70 +1,300 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-21T23:01:17-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jon Francis</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Unlatch from Lazy Ladder</title><link href="http://localhost:4000/plc/2025/06/14/unlatch-from-lazy-ladder.html" rel="alternate" type="text/html" title="Unlatch from Lazy Ladder" /><published>2025-06-14T15:38:00-05:00</published><updated>2025-06-14T15:38:00-05:00</updated><id>http://localhost:4000/plc/2025/06/14/unlatch-from-lazy-ladder</id><content type="html" xml:base="http://localhost:4000/plc/2025/06/14/unlatch-from-lazy-ladder.html"><![CDATA[<ol>
-  <li>Rough write</li>
-  <li>Organize loose thoughts</li>
-  <li>Document claims</li>
-  <li>Include AB reference images</li>
-  <li>Edit</li>
-</ol>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jon Francis</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 23 Jun 2025 21:03:24 -0500</pubDate>
+    <lastBuildDate>Mon, 23 Jun 2025 21:03:24 -0500</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Unlatch from Lazy Ladder</title>
+        <description>&lt;ol&gt;
+  &lt;li&gt;Rough write&lt;/li&gt;
+  &lt;li&gt;Organize loose thoughts&lt;/li&gt;
+  &lt;li&gt;Document claims&lt;/li&gt;
+  &lt;li&gt;Include AB reference images&lt;/li&gt;
+  &lt;li&gt;Edit&lt;/li&gt;
+&lt;/ol&gt;
 
-<h1 id="1-the-intro">1. The intro</h1>
-<p>When state bites back - Latching and unlatching encourages “bool = true” behavior where programmers are littering state left and right with no regard for maintenance. A perfectly orchestrated ladder will involve one output. You should be able to follow write-references backwards and chart any variable.</p>
+&lt;h1 id=&quot;1-the-intro&quot;&gt;1. The intro&lt;/h1&gt;
+&lt;p&gt;When state bites back - Latching and unlatching encourages “bool = true” behavior where programmers are littering state left and right with no regard for maintenance. A perfectly orchestrated ladder will involve one output. You should be able to follow write-references backwards and chart any variable.&lt;/p&gt;
 
-<h1 id="2-the-problem">2. The problem</h1>
-<p>The problem with state is it relies on you expecting the pile of variables to be in one exact shape when your code executes. This is very unhardened behavior. All it takes is for something you ‘didn’t expect’ to result in unexpected behavior. If you’re in the industries I’m in, ‘unexpected behavior’ is unacceptable. Additionally, latching is often done in-line which can express a lack of confidence in the sequencing of the variables. You may be one cycle off from catastrophic race-condition and not even know it.</p>
+&lt;h1 id=&quot;2-the-problem&quot;&gt;2. The problem&lt;/h1&gt;
+&lt;p&gt;The problem with state is it relies on you expecting the pile of variables to be in one exact shape when your code executes. This is very unhardened behavior. All it takes is for something you ‘didn’t expect’ to result in unexpected behavior. If you’re in the industries I’m in, ‘unexpected behavior’ is unacceptable. Additionally, latching is often done in-line which can express a lack of confidence in the sequencing of the variables. You may be one cycle off from catastrophic race-condition and not even know it.&lt;/p&gt;
 
-<h1 id="3-recognizing-smell">3. Recognizing smell</h1>
-<p>There are a few kinds of anti-patterns that should send shivers.</p>
-<ul>
-  <li>How did this bit get turned on?</li>
-  <li>Forgetting to reset some variable on module reset</li>
-  <li>Variable bloat
-    <ul>
-      <li>Having tons of bools in a big chain that latch each other one to represent a stage of work and don’t really represent anything themselves</li>
-    </ul>
-  </li>
-</ul>
+&lt;h1 id=&quot;3-recognizing-smell&quot;&gt;3. Recognizing smell&lt;/h1&gt;
+&lt;p&gt;There are a few kinds of anti-patterns that should send shivers.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;How did this bit get turned on?&lt;/li&gt;
+  &lt;li&gt;Forgetting to reset some variable on module reset&lt;/li&gt;
+  &lt;li&gt;Variable bloat
+    &lt;ul&gt;
+      &lt;li&gt;Having tons of bools in a big chain that latch each other one to represent a stage of work and don’t really represent anything themselves&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-<h1 id="4-solutions-abstract">4. Solutions abstract</h1>
-<p>It can be acceptable to SET/RESET multiple times… if they’re in differently branches of the system. Only one SET/RESET should be accessible to the code at the time. I get it, in an ideal world we should have one OTE at the top that completely describes top-to-bottom behavior but let’s cut ourselves a little slack. Your output-valve may have two different state machines for homing versus steady-state behavior, but you should NEVER be relying on code in separate realms of the codebase to coincidentally knock your variables into the right shape.</p>
+&lt;h1 id=&quot;4-solutions-abstract&quot;&gt;4. Solutions abstract&lt;/h1&gt;
+&lt;p&gt;It can be acceptable to SET/RESET multiple times… if they’re in differently branches of the system. Only one SET/RESET should be accessible to the code at the time. I get it, in an ideal world we should have one OTE at the top that completely describes top-to-bottom behavior but let’s cut ourselves a little slack. Your output-valve may have two different state machines for homing versus steady-state behavior, but you should NEVER be relying on code in separate realms of the codebase to coincidentally knock your variables into the right shape.&lt;/p&gt;
 
-<h1 id="5-solutions-handy">5. Solutions handy</h1>
-<ul>
-  <li>If you think you need a plex of bools for a shifting condition, are you sure you don’t just need an INT instead?
-    <ul>
-      <li>“Oh but what happens if that INT somehow ends up at a variable I don’t expect?”</li>
-      <li>Well now your downstream functions implicitly won’t consume the invalid value, unlike a series of bools which are used to produce invalid products</li>
-    </ul>
-  </li>
-  <li>Split results from conditions.</li>
-</ul>
+&lt;h1 id=&quot;5-solutions-handy&quot;&gt;5. Solutions handy&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;If you think you need a plex of bools for a shifting condition, are you sure you don’t just need an INT instead?
+    &lt;ul&gt;
+      &lt;li&gt;“Oh but what happens if that INT somehow ends up at a variable I don’t expect?”&lt;/li&gt;
+      &lt;li&gt;Well now your downstream functions implicitly won’t consume the invalid value, unlike a series of bools which are used to produce invalid products&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Split results from conditions.&lt;/li&gt;
+&lt;/ul&gt;
 
-<h1 id="6-a-whole-thing">6. A whole thing</h1>
-<p>Consider a simple state machine that moves a set of parts in order. Todo put some of boss’s work here as example.</p>
+&lt;h1 id=&quot;6-a-whole-thing&quot;&gt;6. A whole thing&lt;/h1&gt;
+&lt;p&gt;Consider a simple state machine that moves a set of parts in order. Todo put some of boss’s work here as example.&lt;/p&gt;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ STEP &gt;= 10 ] [ STEP &lt; 40        ]  -&gt;  ( Grabber_Arm )
-[ STEP &gt;= 30 ] [ STEP &lt; 50        ]  -&gt;  ( Gripper_Vlv )
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[ STEP &amp;gt;= 10 ] [ STEP &amp;lt; 40        ]  -&amp;gt;  ( Grabber_Arm )
+[ STEP &amp;gt;= 30 ] [ STEP &amp;lt; 50        ]  -&amp;gt;  ( Gripper_Vlv )
 
-[ STEP ==  0 ]                       -&gt;  ( MOV  1 Step )
-[ STEP ==  1 ] [ Grabber_Homed    ]  -&gt;  ( MOV 10 Step )
-[ STEP == 10 ] [ Grabber_Extended ]  -&gt;  ( MOV 20 Step )
-[ STEP == 20 ] [ Part_Present     ]  -&gt;  ( MOV 30 Step )
-[ STEP == 30 ] [ Gripper_OK       ]  -&gt;  ( MOV 40 Step )
-[ STEP == 40 ] [ Grabber_Homed    ]  -&gt;  ( MOV 50 Step )
-[ STEP == 50 ] [ Gripper_Released ]  -&gt;  ( MOV  0 Step )
-</code></pre></div></div>]]></content><author><name></name></author><category term="plc" /><summary type="html"><![CDATA[Rough write Organize loose thoughts Document claims Include AB reference images Edit]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/06/12/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-06-12T15:26:44-05:00</published><updated>2025-06-12T15:26:44-05:00</updated><id>http://localhost:4000/jekyll/update/2025/06/12/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/06/12/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+[ STEP ==  0 ]                       -&amp;gt;  ( MOV  1 Step )
+[ STEP ==  1 ] [ Grabber_Homed    ]  -&amp;gt;  ( MOV 10 Step )
+[ STEP == 10 ] [ Grabber_Extended ]  -&amp;gt;  ( MOV 20 Step )
+[ STEP == 20 ] [ Part_Present     ]  -&amp;gt;  ( MOV 30 Step )
+[ STEP == 30 ] [ Gripper_OK       ]  -&amp;gt;  ( MOV 40 Step )
+[ STEP == 40 ] [ Grabber_Homed    ]  -&amp;gt;  ( MOV 50 Step )
+[ STEP == 50 ] [ Gripper_Released ]  -&amp;gt;  ( MOV  0 Step )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sat, 14 Jun 2025 15:38:00 -0500</pubDate>
+        <link>http://localhost:4000/plc/2025/06/14/unlatch-from-lazy-ladder.html</link>
+        <guid isPermaLink="true">http://localhost:4000/plc/2025/06/14/unlatch-from-lazy-ladder.html</guid>
+        
+        
+        <category>plc</category>
+        
+      </item>
+    
+      <item>
+        <title>Example Post</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/images/image-4.png&quot; alt=&quot;sample post&quot; /&gt;&lt;/p&gt;
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+&lt;h1 id=&quot;header-1&quot;&gt;Header 1&lt;/h1&gt;
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+&lt;h2 id=&quot;header-2&quot;&gt;Header 2&lt;/h2&gt;
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+&lt;h3 id=&quot;header-3&quot;&gt;Header 3&lt;/h3&gt;
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+&lt;h4 id=&quot;header-4&quot;&gt;Header 4&lt;/h4&gt;
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+&lt;h5 id=&quot;header-5&quot;&gt;Header 5&lt;/h5&gt;
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+&lt;h6 id=&quot;header-6&quot;&gt;Header 6&lt;/h6&gt;
+
+&lt;h2 id=&quot;paragraphs&quot;&gt;Paragraphs&lt;/h2&gt;
+
+&lt;p&gt;These are sample paragraphs showing &lt;em&gt;italics&lt;/em&gt;, &lt;strong&gt;bold&lt;/strong&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;code&lt;/code&gt; text style. Here is an unordered  list&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and an ordered list&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A blockquote would look like this.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;another one&lt;/p&gt;
+
+  &lt;p&gt;with multiple lines&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Code:&lt;/strong&gt; Let’s keep it to its length and let it not take the whole width.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nav&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;About&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;Contact&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;Project&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.&lt;/p&gt;
+
+&lt;p&gt;This is a simple markdown table&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Tables&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Are&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Cool&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;col 3 is&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;right-aligned&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$1600&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;col 2 is&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;centered&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;zebra stripes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;are neat&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Use below code to show &lt;strong&gt;Table of Contents&lt;/strong&gt; on a page&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Do&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;remove&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;will&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;displayed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:toc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+</description>
+        <pubDate>Sat, 07 May 2016 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/2016/05/07/example.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/05/07/example.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Documentation</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#features&quot; id=&quot;markdown-toc-features&quot;&gt;Features&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#customizable-theme&quot; id=&quot;markdown-toc-customizable-theme&quot;&gt;Customizable theme&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#inline-css&quot; id=&quot;markdown-toc-inline-css&quot;&gt;Inline CSS&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#light-weight&quot; id=&quot;markdown-toc-light-weight&quot;&gt;Light-weight&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#prose-editing-ready&quot; id=&quot;markdown-toc-prose-editing-ready&quot;&gt;Prose editing ready&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#pre-installed-disqus-comments&quot; id=&quot;markdown-toc-pre-installed-disqus-comments&quot;&gt;Pre-installed Disqus comments&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#installation&quot; id=&quot;markdown-toc-installation&quot;&gt;Installation&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#how-to-delete-old-gh-pages-branch&quot; id=&quot;markdown-toc-how-to-delete-old-gh-pages-branch&quot;&gt;How to delete old &lt;strong&gt;gh-pages&lt;/strong&gt; branch?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#customization&quot; id=&quot;markdown-toc-customization&quot;&gt;Customization&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#theme&quot; id=&quot;markdown-toc-theme&quot;&gt;Theme&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#font&quot; id=&quot;markdown-toc-font&quot;&gt;Font&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#logo&quot; id=&quot;markdown-toc-logo&quot;&gt;Logo&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#development&quot; id=&quot;markdown-toc-development&quot;&gt;Development&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#license&quot; id=&quot;markdown-toc-license&quot;&gt;License&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#changelog&quot; id=&quot;markdown-toc-changelog&quot;&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;features&quot;&gt;Features&lt;/h1&gt;
+
+&lt;h2 id=&quot;customizable-theme&quot;&gt;Customizable theme&lt;/h2&gt;
+&lt;p&gt;The theme can be customized just by changing few variables in &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/p&gt;
+
+&lt;h2 id=&quot;inline-css&quot;&gt;Inline CSS&lt;/h2&gt;
+&lt;p&gt;Since the style used in this theme is very less, I’m inlining it. This will save a request and hence speeds up website loading.&lt;/p&gt;
+
+&lt;h2 id=&quot;light-weight&quot;&gt;Light-weight&lt;/h2&gt;
+&lt;p&gt;Since the theme is based on default Jekyll theme, it is very light-weight. No JavaScript except analytics is used!
+&lt;img src=&quot;/images/webpagetest-jekyll-theme-thunder.jpg&quot; alt=&quot;jekyll theme thunder speed test&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;prose-editing-ready&quot;&gt;Prose editing ready&lt;/h2&gt;
+&lt;p&gt;You can edit or add blog posts easily using &lt;a href=&quot;http://prose.io&quot;&gt;Prose&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;pre-installed-disqus-comments&quot;&gt;Pre-installed Disqus comments&lt;/h2&gt;
+&lt;p&gt;Disqus is already installed. All you have to do is to sign up with Disqus, get the &lt;strong&gt;disqus-shortname&lt;/strong&gt; and update it in the &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/p&gt;
+
+&lt;p&gt;An example page loads completely in 1.1s!&lt;/p&gt;
+
+&lt;p&gt;In a comparision, it loads faster than an amp page made using Jekyll - &lt;a href=&quot;https://cdn.ampproject.org/c/s/ageitgey.github.io/amplify/2016/03/08/example-post.html&quot; rel=&quot;nofollow&quot;&gt;amplify&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cdn.ampproject.org/c/s/ageitgey.github.io/amplify/2016/03/08/example-post.html&quot; rel=&quot;nofollow&quot;&gt;Amplify page&lt;/a&gt; loading speed
+&lt;img src=&quot;/images/webpagetest-jekyll-theme-amplify-example.jpg&quot; alt=&quot;Amp page loading speed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://webjeda.com/thunder/example/&quot;&gt;Thunder page&lt;/a&gt; loading speed
+&lt;img src=&quot;/images/webpagetest-jekyll-theme-thunder-example.jpg&quot; alt=&quot;Thunder page loading speed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Though the contents of the page are different, they are comparable because both pages have one image and thunder example has code, blockquote, table ordered list, unordered list and all headers. That I think is a fair comparision.&lt;/p&gt;
+
+&lt;h1 id=&quot;installation&quot;&gt;Installation&lt;/h1&gt;
+&lt;p&gt;Fork the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt; branch and delete &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch in it. This is important because &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch is used here only to host the blog. You should be using the master branch as the source and create a fresh &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-delete-old-gh-pages-branch&quot;&gt;How to delete old &lt;strong&gt;gh-pages&lt;/strong&gt; branch?&lt;/h2&gt;
+&lt;p&gt;After forking the repository, click on &lt;strong&gt;branches&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/delete-github-branch.png&quot; alt=&quot;delete gh-pages branch&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Delete &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch.
+&lt;img src=&quot;/images/delete-github-branch-2.png&quot; alt=&quot;delete gh-pages branch&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You have to create a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch using the master branch. Go back to the forked repository and create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/create-gh-pages-branch.JPG&quot; alt=&quot;create gh-pages branch&quot; style=&quot;border: 1px solid #eee&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, go to settings and check the &lt;strong&gt;Github Pages&lt;/strong&gt; section. You should see a URL where the blog is hosted.&lt;/p&gt;
+
+&lt;p&gt;This process will host the theme as a &lt;strong&gt;Project Page&lt;/strong&gt;. You can also download the files for local development.&lt;/p&gt;
+
+&lt;p&gt;Default theme will look like this&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/thunder-jekyll-theme.jpg&quot; alt=&quot;webjeda thunder jekyll theme&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This theme is responsive.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/images/thunder-responsive-jekyll-theme.jpg&quot; alt=&quot;webjeda thunder jekyll responsive theme&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;customization&quot;&gt;Customization&lt;/h1&gt;
+
+&lt;h2 id=&quot;theme&quot;&gt;Theme&lt;/h2&gt;
+&lt;p&gt;The theme provides a nice header that can be customized by changing colors in the &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#color scheme&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;color-1&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#E64C3C&apos;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;color-2&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#F0C419&apos;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/thunder-jekyll-theme-2.jpg&quot; alt=&quot;webjeda sidebar theme&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remember, while developing locally, every change you make in &lt;strong&gt;_config.yml&lt;/strong&gt; is applied only if you restart &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; process.&lt;/p&gt;
+
+&lt;h2 id=&quot;font&quot;&gt;Font&lt;/h2&gt;
+&lt;p&gt;The default font is Helvetica. Text shadow is used to give it a little deapth.&lt;/p&gt;
+
+&lt;h2 id=&quot;logo&quot;&gt;Logo&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;webjeda thunder&lt;/strong&gt; logo is an SVG file. This can be removed and text can be used as the logo. Make these changes in the &lt;strong&gt;header&lt;/strong&gt; file. But I suggest to use an SVG or an image.&lt;/p&gt;
+
+&lt;h1 id=&quot;development&quot;&gt;Development&lt;/h1&gt;
+&lt;p&gt;Make changes to the &lt;strong&gt;master&lt;/strong&gt; branch and create a pull request. Do not use &lt;strong&gt;gh-pages&lt;/strong&gt; branch as it is used to host the theme.&lt;/p&gt;
+
+&lt;h1 id=&quot;license&quot;&gt;License&lt;/h1&gt;
+&lt;p&gt;MIT License&lt;/p&gt;
+
+&lt;h1 id=&quot;changelog&quot;&gt;Changelog&lt;/h1&gt;
+&lt;pre&gt;
+version 1.0 - Color-bar is now css. SEO improvements. Added an author section.  
+  
+version 0.9 - Minimal design, small and compressed css, built in disqus comments, compressed html, superfast loading UI.
+&lt;/pre&gt;
+</description>
+        <pubDate>Sat, 07 May 2016 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/2016/05/07/documentation.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/05/07/documentation.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
