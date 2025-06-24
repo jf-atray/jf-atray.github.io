@@ -202,28 +202,34 @@ table {
 
 }
 .colr-1{
-background-color: #3498db;
+background-color: #FF9735;
 }
 .colr-2{
-background-color: #f1c40f;
+background-color: #D7AF5F;
 }
 .colr-3{
-background-color: #2ecc71;
+background-color: #AFAF5F;
 }
 .colr-4{
-background-color: #e74c3c;
+background-color: #87AF52;
 }
 .colr-5{
-background-color: #9b59b6;
+background-color: #5FAF52;
 }
 .colr-6{
-background-color: #1abc9c;
+background-color: #009735;
 }
 .colr-7{
-background-color: #e67e22;
+background-color: #00875F;
 }
 .colr-8{
-background-color: #34495e;
+background-color: #007D74;
+}
+.colr-9{
+background-color: #007DAF;
+}
+.colr-0{
+background-color: #00AFD7;
 }
 
 .author {
@@ -261,6 +267,32 @@ background-color: #34495e;
 
 .cor-head {
     width: 12.5%;
+    height: 5px;
+    display: inline-block;
+}
+
+.cor-heada {
+    width: 17%; 
+    height: 5px;
+    display: inline-block;
+}
+.cor-headb{
+    width: 12%; 
+    height: 5px;
+    display: inline-block;
+}
+.cor-headc {
+    width: 9%; 
+    height: 5px;
+    display: inline-block;
+}
+.cor-headd {
+    width: 7%; 
+    height: 5px;
+    display: inline-block;
+}
+.cor-heade {
+    width: 5%; 
     height: 5px;
     display: inline-block;
 }
