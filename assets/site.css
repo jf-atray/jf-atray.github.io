@@ -22,8 +22,10 @@
   --hairline-warm: 1px solid var(--line-warm);
 
   /* accents */
+  --amber-hi: #ffe4a8;
   --amber: #ffd479;
   --amber2: #ffb347;
+  --amber-dim: #a6854e;
   --blue: #7db8ff;
   --violet: #b48fff;
 }
@@ -93,9 +95,9 @@ main { display: flex; flex-wrap: wrap; gap: 4ch; align-items: flex-start; }
 @media (max-width: 150ch) { .sky { display: none; } }
 
 /* web1 link semantics, shifted for a dark wall */
-a { color: var(--blue); text-decoration-style: dotted; }
-a:visited { color: var(--violet); }
-a:hover { color: var(--amber); }
+a { color: var(--amber2); text-decoration-style: dotted; }
+a:visited { color: var(--amber-dim); }
+a:hover { color: var(--amber-hi); }
 
 /* the sites own amber, on select */
 ::selection { background: var(--amber); color: var(--bg); }
