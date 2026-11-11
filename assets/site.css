@@ -12,7 +12,7 @@ body {
 /* the page is wider than the measure. prose column plus a
    furniture rail */
 main { display: flex; flex-wrap: wrap; gap: 4ch; align-items: flex-start; }
-.col { flex: 1; min-width: 45ch; }
+.col { flex: 1; min-width: min(45ch, 100%); }
 .rail {
   width: 28ch;
   flex: none;
@@ -23,6 +23,13 @@ main { display: flex; flex-wrap: wrap; gap: 4ch; align-items: flex-start; }
 }
 .rail h3 { font-size: 14px; color: #999; margin: 0 0 1ch; }
 .rail p { margin: 0 0 1.5ch; }
+
+/* stacked narrow: the rail lands below content an swaps its
+   side border for a top one */
+@media (max-width: 900px) {
+  .rail { width: 100%; border-left: 0; border-top: 1px solid #161618;
+          padding-left: 0; padding-top: 2ch; }
+}
 
 /* the banners field continues down the page edges on wide
    windows */
