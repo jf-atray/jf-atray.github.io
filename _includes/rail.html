@@ -9,17 +9,18 @@
 {% if page.layout == 'piece' %}
 {% assign wing = site.pieces | where: "era", page.era %}
 <h3>this wing</h3>
-<p><a href="{{ '/pieces/era-' | append: page.era | append: '.html' | relative_url }}">era {{ page.era }}</a>. {{ wing.size }} works</p>
+<p class="kv"><span class="k"><a href="{{ '/pieces/era-' | append: page.era | append: '.html' | relative_url }}">era {{ page.era }}</a></span><span class="v">{{ wing.size }} works</span></p>
 {% endif %}
 {% if page.layout == 'post' %}
 <h3>archive</h3>
 {% assign yrs = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
-<p>{% for y in yrs %}{{ y.name }} . {{ y.size }}{% unless forloop.last %} / {% endunless %}{% endfor %}</p>
+{% for y in yrs %}<p class="kv"><span class="k">{{ y.name }}</span><span class="v">{{ y.size }} posts</span></p>{% endfor %}
 {% endif %}
 <h3>daily</h3>
-<p>tonights pick. <a href="{{ potd.url | relative_url }}">{{ potd.title }}</a></p>
-<p>latest post. <a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></p>
+<p class="kv"><span class="k">tonights pick</span><span class="v"><a href="{{ potd.url | relative_url }}">{{ potd.title }}</a></span></p>
+<p class="kv"><span class="k">latest post</span><span class="v"><a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></span></p>
 <h3>odds</h3>
 <p><- <a href="{{ '/links.html' | relative_url }}">the webring</a> -> . <a href="{{ '/map.html' | relative_url }}">site map</a></p>
-<p>visitors: <img class="hitcounter" src="https://xbawx.com/counter/iwt59j5j7euu.gif" alt="visitor count" width="96" height="32"> . est. 2026</p>
+<p class="kv"><span class="k">visitors</span><span class="v"><img class="hitcounter" src="https://xbawx.com/counter/iwt59j5j7euu.gif" alt="visitor count" width="96" height="32"></span></p>
+<p class="kv"><span class="k">est.</span><span class="v">2026</span></p>
 <p><span class="btn88">xterm_view</span></p>
