@@ -24,6 +24,15 @@ main { display: flex; flex-wrap: wrap; gap: 4ch; align-items: flex-start; }
 .rail h3 { font-size: 14px; color: #999; margin: 0 0 1ch; }
 .rail p { margin: 0 0 1.5ch; }
 
+/* the generated site map: amber sections, grey leaves,
+   dim branches, notes in the quiet column */
+.sm-r { color: #ffd479; }
+.sm-b { color: #3a3a3d; }
+.sm-n { color: #ffb347; }
+.sm-l { color: #d8d8d8; }
+.sm-z { color: #777; }
+.sitemap a { color: inherit; }
+
 /* the corridor through the collection, prev left next right */
 .ribbon { display: flex; justify-content: space-between; margin-top: 3ch;
           font-size: 14px; }

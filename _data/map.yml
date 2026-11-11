@@ -1,0 +1,54 @@
+# the sites topology as data. _plugins/sitemap.rb draws it.
+# nodes: name, note, optional url, optional children,
+# optional expand: era (grows itself from real era pages).
+- name: home
+  url: /
+  note: the front door
+- name: pieces
+  url: /pieces.html
+  note: the collection, all one level
+  children:
+    - name: start here
+      url: /pieces/start-here.html
+      note: a first walk
+    - name: catalogue
+      url: /pieces/catalogue.html
+      note: the whole record
+    - name: era walls
+      note: the archive rooms
+      expand: era
+- name: posts
+  url: /posts.html
+  note: the words
+- name: projects
+  url: /projects/
+  note: things that arent text
+  children:
+    - name: you first
+      url: /projects/you-first.html
+      note: playable, right here
+    - name: xterm-view
+      url: /projects/xterm-view.html
+      note: this site, as a project
+- name: about
+  url: /about/
+  note: who
+  children:
+    - name: now
+      url: /about/now.html
+      note: the living page
+    - name: site
+      url: /about/site.html
+      note: the colophon
+- name: the rail
+  note: furniture on every page
+  children:
+    - name: links
+      url: /links.html
+      note: bookmarks outward
+    - name: guestbook
+      url: /guestbook.html
+      note: say hi
+    - name: shrine
+      url: /shrine.html
+      note: devotion
