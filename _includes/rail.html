@@ -2,24 +2,24 @@
 {% assign potd_i = site.time | date: "%s" | divided_by: 86400 | floor | modulo: site.pieces.size %}
 {% assign potd = site.pieces[potd_i] %}
 <h3>me</h3>
-<p><a href="{{ '/about/' | relative_url }}">about</a> ·
-   <a href="{{ '/about/now.html' | relative_url }}">now</a> ·
-   <a href="{{ '/shrine.html' | relative_url }}">shrine</a> ·
+<p><a href="{{ '/about/' | relative_url }}">about</a> .
+   <a href="{{ '/about/now.html' | relative_url }}">now</a> .
+   <a href="{{ '/shrine.html' | relative_url }}">shrine</a> .
    <a href="{{ '/guestbook.html' | relative_url }}">say hi</a></p>
 {% if page.layout == 'piece' %}
 {% assign wing = site.pieces | where: "era", page.era %}
 <h3>this wing</h3>
-<p><a href="{{ '/pieces/era-' | append: page.era | append: '.html' | relative_url }}">era {{ page.era }}</a> — {{ wing.size }} works</p>
+<p><a href="{{ '/pieces/era-' | append: page.era | append: '.html' | relative_url }}">era {{ page.era }}</a>. {{ wing.size }} works</p>
 {% endif %}
 {% if page.layout == 'post' %}
 <h3>archive</h3>
 {% assign yrs = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
-<p>{% for y in yrs %}{{ y.name }} · {{ y.size }}{% unless forloop.last %} / {% endunless %}{% endfor %}</p>
+<p>{% for y in yrs %}{{ y.name }} . {{ y.size }}{% unless forloop.last %} / {% endunless %}{% endfor %}</p>
 {% endif %}
 <h3>daily</h3>
-<p>tonights pick — <a href="{{ potd.url | relative_url }}">{{ potd.title }}</a></p>
-<p>latest post — <a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></p>
+<p>tonights pick. <a href="{{ potd.url | relative_url }}">{{ potd.title }}</a></p>
+<p>latest post. <a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></p>
 <h3>odds</h3>
-<p>← <a href="{{ '/links.html' | relative_url }}">the webring</a> → · <a href="{{ '/map.html' | relative_url }}">site map</a></p>
-<p>visitors: <img class="hitcounter" src="https://xbawx.com/counter/iwt59j5j7euu.gif" alt="visitor count" width="96" height="32"> · est. 2026</p>
+<p><- <a href="{{ '/links.html' | relative_url }}">the webring</a> -> . <a href="{{ '/map.html' | relative_url }}">site map</a></p>
+<p>visitors: <img class="hitcounter" src="https://xbawx.com/counter/iwt59j5j7euu.gif" alt="visitor count" width="96" height="32"> . est. 2026</p>
 <p><span class="btn88">xterm_view</span></p>

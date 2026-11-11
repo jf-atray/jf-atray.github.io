@@ -13,8 +13,8 @@ layout: default
 {% assign pi = cur | minus: 1 %}
 {% assign ni = cur | plus: 1 %}
 <nav class="ribbon">
-  {% if pi >= 0 %}<a href="{{ site.pieces[pi].url | relative_url }}">← {{ site.pieces[pi].title }}</a>{% else %}<span></span>{% endif %}
-  {% if ni < site.pieces.size %}<a href="{{ site.pieces[ni].url | relative_url }}">{{ site.pieces[ni].title }} →</a>{% endif %}
+  {% if pi >= 0 %}<a href="{{ site.pieces[pi].url | relative_url }}"><- {{ site.pieces[pi].title }}</a>{% else %}<span></span>{% endif %}
+  {% if ni < site.pieces.size %}<a href="{{ site.pieces[ni].url | relative_url }}">{{ site.pieces[ni].title }} -></a>{% endif %}
 </nav>
 {% comment %} the lattice: hand views declare pieces: in front
     matter, era walls match on era. where a piece hangs {% endcomment %}
@@ -24,7 +24,7 @@ layout: default
   {% if v.pieces contains page.slug or v.layout == "era" and v.era == page.era %}
     {% capture l %}{{ sep }}<a href="{{ v.url | relative_url }}">{{ v.title }}</a>{% endcapture %}
     {% assign links = links | append: l %}
-    {% assign sep = " · " %}
+    {% assign sep = " . " %}
   {% endif %}
 {% endfor %}
 {% if links != "" %}<p class="inviews">hangs in: {{ links }}</p>{% endif %}

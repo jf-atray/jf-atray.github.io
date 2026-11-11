@@ -13,24 +13,24 @@ pieces are a flat collection in `_pieces/`, curated views are
 loose files in `pieces/`. `plan-xterm-view.md` is the design
 history.
 
-`art/` holds finished renderable work only. process material —
-drafts, frameworks, discovery notes — lives in `art/_drafts/`:
+`art/` holds finished renderable work only. process material,
+drafts, frameworks, discovery notes, lives in `art/_drafts/`:
 the renderer cant reach it there (basename lookup) and jekyll
 wont publish it (underscore dir). split files at the authors
 own divider walls.
 
 ## generated
 
-- `index.html` whats-new — lifted from `git log` subjects at
+- `index.html` whats-new, lifted from `git log` subjects at
   build time by `_plugins/news.rb`. the commit voice is the
   news voice.
-- `map.html` — drawn by `_plugins/sitemap.rb` from
+- `map.html`, drawn by `_plugins/sitemap.rb` from
   `_data/map.yml`. new pages go in the data file or the build
   warns they are unmapped.
 
 ## props
 
-- `index.html` front matter `feature:` — the pinned piece on
+- `index.html` front matter `feature:`, the pinned piece on
   the front door, a slug from `_pieces`.
-- `_includes/rail.html` — the visitor count is a prop, not a
-  real number.
+- `_includes/rail.html`, the visitor count hotlinks xbawx.com
+  an counts for real.

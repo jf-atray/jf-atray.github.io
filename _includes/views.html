@@ -3,6 +3,6 @@
   <a href="{{ include.index | relative_url }}">index</a>
   {%- assign views = site.pages | where: "dir", include.dir | where_exp: "v", "v.url != include.index" | sort: "url" -%}
   {%- for v in views %}
-    · <a href="{{ v.url | relative_url }}">{{ v.title }}</a>
+    . <a href="{{ v.url | relative_url }}">{{ v.title }}</a>
   {%- endfor %}
 </nav>

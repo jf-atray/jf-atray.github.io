@@ -13,6 +13,6 @@ an the guestbook is open if u want to scratch ur name in.</p>
 <h2>whats new</h2>
 <ul class="news">
 {% for n in site.data.news limit:8 %}
-  <li>{{ n.date }} — {{ n.msg | escape }}</li>
+  <li>{{ n.date }}. {{ n.msg | escape }}</li>
 {% endfor %}
 </ul>

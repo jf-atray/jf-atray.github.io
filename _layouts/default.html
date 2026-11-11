@@ -1,37 +1,37 @@
 <!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+<title>{% if page.title %}{{ page.title }}. {% endif %}{{ site.title }}</title>
 <link rel="stylesheet" href="{{ '/assets/palette.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
 
 <body{% if page.lx %} class="{{ page.lx }}"{% endif %}>
 <div class="sky sky-l">{% xterm %}
 &240   .
-&240        ·
+&240        .
 &w     *
 &240 .
 &240      .
 &058  *
 &240         .
-&240    ·
+&240    .
 &w        *
 &240  .
 &240     .
 &196      *
-&240        ·
+&240        .
 &240   .
 &058       *
 &240 .
 &240     *
 &240        .
-&240    ·
+&240    .
 &w   *
 &240      .
 &240         *
 &240  .
 &058    *
-&240       ·
+&240       .
 &240 .
 &240    *
 &w         *
@@ -39,51 +39,51 @@
 &240   .
 &058        *
 &240     .
-&240  ·
+&240  .
 &w       *
 &240 .
 &240      .
 &196   *
-&240        ·
+&240        .
 &240   .
 &058     *
 &240 .
 &240    *
 &240       .
-&240    ·
+&240    .
 &w  *
 &240     .
 &240        *
 &240   .
 &058   *
-&240      ·
+&240      .
 {% endxterm %}</div>
 <div class="sky sky-r">{% xterm %}
 &240      .
-&240   ·
+&240   .
 &w          *
 &240  .
 &240     .
 &058       *
 &240        .
-&240   ·
+&240   .
 &w      *
 &240    .
 &240         .
 &196  *
-&240      ·
+&240      .
 &240        .
 &058   *
 &240     .
 &240  *
 &240         .
-&240     ·
+&240     .
 &w        *
 &240   .
 &240  *
 &240     .
 &058      *
-&240    ·
+&240    .
 &240        .
 &240  *
 &w     *
@@ -91,32 +91,32 @@
 &240  .
 &058 *
 &240      .
-&240    ·
+&240    .
 &w       *
 &240        .
 &240   .
 &196      *
-&240     ·
+&240     .
 &240  .
 &058        *
 &240    .
 &240 *
 &240        .
-&240      ·
+&240      .
 &w    *
 &240       .
 &240 *
 &240   .
 &058     *
-&240    ·
+&240    .
 {% endxterm %}</div>
 <header>
   {% xterm_file banner.txt %}
   <nav>
-    <a href="{{ '/' | relative_url }}">home</a> ·
-    <a href="{{ '/pieces.html' | relative_url }}">pieces</a> ·
-    <a href="{{ '/posts.html' | relative_url }}">posts</a> ·
-    <a href="{{ '/projects/' | relative_url }}">projects</a> ·
+    <a href="{{ '/' | relative_url }}">home</a> .
+    <a href="{{ '/pieces.html' | relative_url }}">pieces</a> .
+    <a href="{{ '/posts.html' | relative_url }}">posts</a> .
+    <a href="{{ '/projects/' | relative_url }}">projects</a> .
     <a href="{{ '/about/' | relative_url }}">about</a>
   </nav>
 </header>
@@ -125,12 +125,12 @@
 <div class="col">
 {% if page.title %}<h1>{{ page.h1 | default: page.title }}</h1>{% endif %}
 {{ content }}
-{% if page.parent %}{% assign up = site.pages | where: "url", page.parent | first %}<p class="crumb">← <a href="{{ page.parent | relative_url }}">{{ up.title | default: "up" }}</a></p>{% endif %}
+{% if page.parent %}{% assign up = site.pages | where: "url", page.parent | first %}<p class="crumb"><- <a href="{{ page.parent | relative_url }}">{{ up.title | default: "up" }}</a></p>{% endif %}
 </div>
 <aside class="rail">{% include rail.html %}</aside>
 </main>
 
 <footer>
-  <p>hand colored text · jekyll · best viewed in any browser</p>
+  <p>hand colored text . jekyll . best viewed in any browser</p>
 </footer>
 </body>

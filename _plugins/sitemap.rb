@@ -1,4 +1,4 @@
-# {% sitemap %} — draws _data/map.yml as a colored ascii tree.
+# {% sitemap %} draws _data/map.yml as a colored ascii tree.
 # urls resolve to real anchors, an the map self-polices:
 # a node naming a missing page warns, an any page absent
 # from the map warns too. it cannot quietly drift.

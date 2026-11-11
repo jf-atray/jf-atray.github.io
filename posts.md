@@ -8,7 +8,7 @@ permalink: /posts.html
 <h2>{{ y.name }}</h2>
 <ul>
 {% for p in y.items %}
-  <li>{{ p.date | date: "%Y-%m-%d" }} — <a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+  <li>{{ p.date | date: "%Y-%m-%d" }}. <a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
 {% endfor %}
 </ul>
 {% endfor %}

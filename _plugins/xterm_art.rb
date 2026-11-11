@@ -174,7 +174,7 @@ module Jekyll
   class XtermFileTag < Liquid::Tag
     def initialize(tag_name, markup, tokens)
       super
-      # {% xterm_file droid.txt cap:left %} — first token is the
+      # {% xterm_file droid.txt cap:left %}. first token is the
       # file, rest are options. cap:left/right parks the caption
       # in that margin, default is under the art.
       parts = markup.strip.split(/\s+/)
@@ -204,21 +204,21 @@ module Jekyll
       unless doc
         return %(<pre class="xterm #{XtermArt.wclass(src)}" aria-hidden="true">#{body}</pre>)
       end
-      alabel = CGI.escapeHTML("#{doc.data['title']} — hand colored text")
+      alabel = CGI.escapeHTML("#{doc.data['title']}. hand colored text")
       pre = %(<pre class="xterm #{XtermArt.wclass(src)}" role="img" aria-label="#{alabel}">#{body}</pre>)
       # datemark is a bare date or nothing; non date values
       # like "uncatalogued" never reach the label
       mark = doc.data['date']
       mark = mark.strftime('%Y-%m-%d') if mark.respond_to?(:strftime)
       mark ||= doc.data['era'] if doc.data['era'] =~ /\A[\d.\/-]+\z/
-      # the piece page itself already h1s the title — the
+      # the piece page itself already h1s the title. the
       # caption there only needs the datemark an the link.
       # parts join so nothing renders a leading separator
       parts = []
       parts << %(<span class="cap-t">#{doc.data['title']}</span>) unless context.registers[:page]['layout'] == 'piece'
       parts << mark if mark
-      cap = parts.join(' — ')
-      cap += ' · ' unless cap.empty?
+      cap = parts.join('. ')
+      cap += '. ' unless cap.empty?
       cls = %w[left right].include?(@cap) ? %(xterm-fig cap-#{@cap[0]}) : 'xterm-fig'
       %(<figure class="#{cls}">#{pre}<figcaption class="cap">#{cap}<a href="#{site.baseurl}/art/#{name}">source</a></figcaption></figure>)
     end
