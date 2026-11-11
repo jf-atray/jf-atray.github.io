@@ -21,7 +21,7 @@ layout: default
 {% assign links = "" %}
 {% assign sep = "" %}
 {% for v in site.pages %}
-  {% if v.pieces contains page.slug or (v.layout == "era" and v.era == page.era) %}
+  {% if v.pieces contains page.slug or v.layout == "era" and v.era == page.era %}
     {% capture l %}{{ sep }}<a href="{{ v.url | relative_url }}">{{ v.title }}</a>{% endcapture %}
     {% assign links = links | append: l %}
     {% assign sep = " · " %}
