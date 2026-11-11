@@ -28,10 +28,13 @@ module Jekyll
         site.data['guestbook'] = (thread['replies'] || []).filter_map do |r|
           p = r['post'] or next
           next if p.dig('author', 'did') == root_did
+          text = p.dig('record', 'text').to_s.strip
+          next if text.empty?
           {
             'handle' => p.dig('author', 'handle'),
             'name' => p.dig('author', 'displayName') || p.dig('author', 'handle'),
-            'text' => p.dig('record', 'text').to_s,
+            'avatar' => p.dig('author', 'avatar'),
+            'text' => text,
             'date' => p.dig('record', 'createdAt').to_s[0, 10],
             'url' => "https://bsky.app/profile/#{p.dig('author', 'handle')}/post/#{p['uri'].split('/').last}",
           }

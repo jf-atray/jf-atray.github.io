@@ -230,9 +230,35 @@ footer {
   border-top: var(--hairline);
 }
 .hitcounter { vertical-align: middle; border: var(--hairline-warm); }
-/* guestbook signatures: name left, date right, words below */
-.gb { margin-bottom: 2.5ch; }
-.gb .gb-d { float: right; color: var(--dim); font-size: 13px; }
+/* guestbook signatures: avatar in the left gutter, name an
+   date over the words on the right */
+.gb { display: flex; gap: 2ch; margin-bottom: 2.5ch; }
+.gb .gb-a { flex: none; width: 48px; }
+.gb .gb-a img { display: block; width: 48px; height: 48px;
+                border-radius: 42%; filter: grayscale(.7); }
+.gb .gb-b { flex: 1; min-width: 0; }
+.gb .gb-h { font-size: 14px; line-height: 1.2; }
+.gb .gb-d { float: right; color: var(--dim); font-size: 13px; line-height: 1.2; }
+/* the wall as an open book: two columns, right page mirrored.
+   names an avatars face out, dates face the gutter, an the
+   words shrink-wrap against the outside edge */
+.gb-wall { --gb-gap: 4ch; display: grid; grid-template-columns: 1fr 1fr;
+           column-gap: var(--gb-gap); }
+/* dates pulled back from the gutter by one gutter: each pair
+   sits three gutters apart */
+.gb-wall .gb:nth-child(odd) .gb-d { margin-right: var(--gb-gap); }
+.gb-wall .gb:nth-child(even) { flex-direction: row-reverse; transform: translateY(3ch); }
+.gb-wall .gb:nth-child(even) .gb-top { text-align: right; }
+.gb-wall .gb:nth-child(even) .gb-d { float: left; margin-left: var(--gb-gap); }
+.gb-wall .gb:nth-child(even) .gb-t { width: fit-content; max-width: 100%; margin-left: auto; }
+@media (max-width: 700px) {
+  .gb-wall { grid-template-columns: 1fr; }
+  .gb-wall .gb .gb-d { margin: 0; }
+  .gb-wall .gb:nth-child(even) { flex-direction: row; transform: none; }
+  .gb-wall .gb:nth-child(even) .gb-top { text-align: left; }
+  .gb-wall .gb:nth-child(even) .gb-d { float: right; }
+  .gb-wall .gb:nth-child(even) .gb-t { width: auto; margin-left: 0; }
+}
 .btn88 {
   display: inline-block;
   width: 88px;

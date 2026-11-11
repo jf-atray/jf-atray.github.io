@@ -38,4 +38,4 @@ xterm_max_width: 80
 # the guestbook wall: replies to this bsky post are rendered
 # by _plugins/guestbook.rb at build. swap the url to move the
 # wall to a real guestbook post.
-guestbook_post: https://bsky.app/profile/jonf.blog/post/3mr6ltiyb222s
+guestbook_post: https://bsky.app/profile/kriswilson.bsky.social/post/3mz4l63dru226
