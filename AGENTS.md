@@ -13,6 +13,12 @@ pieces are a flat collection in `_pieces/`, curated views are
 loose files in `pieces/`. `plan-xterm-view.md` is the design
 history.
 
+`art/` holds finished renderable work only. process material —
+drafts, frameworks, discovery notes — lives in `art/_drafts/`:
+the renderer cant reach it there (basename lookup) and jekyll
+wont publish it (underscore dir). split files at the authors
+own divider walls.
+
 ## generated
 
 - `index.html` whats-new — lifted from `git log` subjects at
