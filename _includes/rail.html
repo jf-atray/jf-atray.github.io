@@ -1,0 +1,14 @@
+{% assign latest = site.posts | first %}
+{% assign potd_i = site.time | date: "%s" | divided_by: 86400 | floor | modulo: site.pieces.size %}
+{% assign potd = site.pieces[potd_i] %}
+<h3>me</h3>
+<p><a href="{{ '/about/' | relative_url }}">about</a> ·
+   <a href="{{ '/about/now.html' | relative_url }}">now</a> ·
+   <a href="{{ '/guestbook.html' | relative_url }}">say hi</a></p>
+<h3>daily</h3>
+<p>tonights pick — <a href="{{ potd.url | relative_url }}">{{ potd.title }}</a></p>
+<p>latest post — <a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></p>
+<h3>odds</h3>
+<p>← <a href="{{ '/links.html' | relative_url }}">the webring</a> →</p>
+<p>visitors: 000042 · est. 2026</p>
+<p><span class="btn88">xterm_view</span></p>

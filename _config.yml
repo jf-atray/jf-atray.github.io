@@ -1,0 +1,36 @@
+title: xterm_view
+description: ascii art an blog
+markdown: kramdown
+
+collections:
+  pieces:
+    output: true
+    permalink: /pieces/:name/
+
+defaults:
+  # the belt: nothing renders without a layout, ever. broad
+  # scope first, narrower scopes override further down.
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      type: pieces
+    values:
+      layout: piece
+      parent: /pieces.html
+      lx: caps-l
+  - scope:
+      type: posts
+    values:
+      layout: post
+      parent: /posts.html
+
+exclude:
+  - notes/
+  - plan-xterm-view.md
+
+# visible column limit for art. warns per line over; set
+# xterm_max_strict: true to make the build refuse instead.
+# delete the line to switch the limit off entirely.
+xterm_max_width: 80

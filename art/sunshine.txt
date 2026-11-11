@@ -1,0 +1,43 @@
+
+&w[&060+&244]============================[&060+&244]============================[&060+&244]
+[&w|     &060T&103h&244e &060Ga&103l&102ac&244ti&250c &060Em&103p&102i&244r&250e&w      |   &231Personal Identification    &w|&244]
+[&060+&244]============================[&060+&244]============================[&060+&244]
+              &060_                                               
+          ,--'&103_&060`--.          &102Birth Name&250: Cesario Ryo
+        &060,&103/&102( \   / )&103\&060.                                
+       &060/&103/&102  \ \_/ /  &103\&060\       &102Race&250: Ryn
+      &060|&103/&102___/     \___&103\&060|      &102Age&250: 24
+      &060(&103(&102___       ___&103)&060)      &102Gender&250: &115o&1099&115-%&110&M&073_l3
+      &060|&103\&102   \  _  /   &103/&060|      &102Place of Birth&250: Coruscant
+       &060\&103\&102  / / \ \  &103/&060/       &102Occupation&250: Freighter Labor
+        &060`&103\&102(_/&103___&102\_)&103/&060'        &102Legal Status&250: Work Visa
+          &060`--._.--'                                           
+                                                            
+&244[&060+&244]============================[&060+&244]============================[&060+&244]
+[&w|      &231Employment History     &w |        &231Qualifications        &w|&244]
+[&060+&244]============================[&060+&244]============================[&060+&244]
+&w
+[&060+&244]============================[&060+&244]============================[&060+&244]
+[&w|       &231Criminal History      &w |         &231Legal Charges        |&244]
+[&060+&244]============================[&060+&244]============================[&060+&244]
+     &250CORUSCANT &244-- &160AGGRAVATED ASSAULT
+     &250CORUSCANT &244-- &160AGGRAVATED ASSAULT
+     &250CORUSCANT &244-- &160PUBLIC INTOXICATION
+     &250CORUSCANT &244-- &160DISTRIBUTION OF GLITTERSTIM
+     &250CORUSCANT &244-- &160ASSAULT WITH A DEADLY WEAPON
+&244[&060+&244]============================[&060+&244]============================[&060+&244]
+[&w|       &231Personal Account      &w |          &231Background          |&244]
+[&060+&244]============================[&060+&244]============================[&060+&244]
+     &102Cesario's first documentation, pre-war, was the licensing
+     and purchase of a class-C speederbike. Wine, spice and
+     women litter the record. He got a good job on cargo that
+     anyone trapped in that hell would kill for. He was a loud
+     mouth drunkard with a target on his back. &160He is dead&102.
+     &240Bel was born in a deeper, darker part of Coruscant. She
+     clawed her way to a better life and took what she could.
+     &102One night, their paths crossed, and &240Bel &102found her escape.
+     His friends never took notice. In fact, the galaxy seemed
+     thankful. &250The new Cesario &102went clean, he started listening.
+     Took time to smell the roses. In some way, Bel never did
+     leave that dark pit, and Cesario flew the stars.
+[&060+&244]============================[&060+&244]============================[&060+&244]

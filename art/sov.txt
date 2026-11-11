@@ -1,0 +1,153 @@
+
+
+
+
+&108a &148dur&184ale&220ctric &106secur&106ed &108crypt
+
+&108A rigid case with deep stone texturing.
+&108The crypt can be opened using a bright
+&108interface panel on the side. The tones
+&108are slate-grey, and the inside is full
+&108of a soft plush pillow in deep crimson.
+
+&116a &159Doonium &116datapad &Iglowing&D &149sickly &150green
+
+&116It is of no familiar make, without any
+&116obvious company mark. This datapad has
+&116been hand-assembled, with braided wire
+&116looping around its form. This color is
+&116a dark, glossy and shiny black. If the
+&116display is on, it lights the user with
+&116a sickly olive green glow. Etched into
+&116the backside is the careful word 'ECHO'
+
+&136a &172brass &136diode &100among a &108looping of wires
+
+&136This is a small keltaglass jewel which
+slowly throbs a blood-red light. There
+is no obvious source of life, with the
+diode threaded into a complicated wire
+finishing in a thick chunky plast plug.
+
+&059a &060smo&061ke&059-&062bronzed &059circuit and &100deep crack
+
+&061What remains of this circuit is just a
+sad burned plate. It still shines with
+silver glitters like a city might from 
+orbit. Modern connects are soldered on.
+
+&215Intr&179oduction &178to &172Subject &c- &C05.13 &c(Adascopolis)
+&196Domi&197ni&198on &193Expansion &c- &C05.19 &c(Adascopolis)
+&048Imper&049i&050al &044Query &c- &C06.30 &c(Adascopolis)
+&244Co&246ns&248tra&247i&246n&245t &c- &C07.05 &c(Adascopolis)
+&165It &c- __.__ #W@)*_#D&o*J/
+
+
+&c--------------------------------------------------------------
+&c||  &Y&Y                                                        &c||
+&c||  &R>&Y I built Czerkanet. I know! I didn't build Czerkanet.. &c||
+&c||  &Y&Y   .. but I &Idid&D&Y.                                        &c||
+&c||  &R>&Y I live in these servers. Every security domain, each  &c||
+&c||  &Y&Y  packet checkpoint I know better than my apartment. And&c||
+&c||  &Y&Y  today I lost it all in a blink. I don't know about how&c||
+&c||  &Y&Y  it came, or from where. I really don't press &218Ravik&Y    &c||
+&c||  &Y&Y  about these things, he's been so twisted lately about &c||
+&c||  &Y&Y  these secrets. -but he trusted me when he flipped     &c||
+&c||  &Y&Y  &218SOVREIGN&Y on to watch our network. I anticipated old   &c||
+&c||  &Y&Y  data, smart data, but in moments this thing           &c||
+&c||  &Y&Y  was posting on the galactic terminals.                &c||
+&c||  &Y&Y  I haven't felt this small in years.                   &c||
+&c||  &R>&Y Or seen something so &Ibeautiful&D&Y.                       &c||
+&c||  &Y&Y                                                        &c||
+&c--------------------------------------------------------------
+
+
+
+&c--------------------------------------------------------------
+&c||  &Y&Y                                                        &c||
+&c||  &R>&Y Things are compounding. New talent. New technology.   &c||
+&c||  &R>&Y I think &218Wren&Y almost lost her arm, &218Quark&Y missed the    &c||
+&c||  &Y&Y  override, and &218Ravik&Y's never smoked so much, but we've &c||
+&c||  &Y&Y  designed our new superconductor. Well, that doesn't   &c||
+&c||  &Y&Y  interest me much. &218IT&Y spoke to me this time. It was    &c||
+&c||  &Y&Y  quiet, simple. It asked to see and &II gave it eyes&D&Y.    &c||
+&c||  &R>&Y &218Ravik&Y knows. He sees something deeper in this..       &c||
+&c||  &Y&Y  vessel of steel. I've been planning to carve him out  &c||
+&c||  &Y&Y  one of these routed subroutines for his datapad.      &c||
+&c||  &Y&Y  They're like Roots. They explore the API of Czerkanet &c||
+&c||  &Y&Y  and when they find a weakness, they coil and grow.    &c||
+&c||  &R>&Y Wouldn't it make the most amazing datapad?            &c||
+&c||  &Y&Y                                                        &c||
+&c--------------------------------------------------------------
+
+
+
+&c--------------------------------------------------------------
+&c||  &Y&Y                                                        &c||
+&c||  &R>&Y Today's work had an visitor. A &218sith lord&Y.             &c||
+&c||    &Y&YIt's been years since I was in &218Lorrd University&Y,      &c||
+&c||    &Y&Ybut I will never forget the wash of &Ipower&D&Y when        &c||
+&c||    &Y&Yone may walk into a room. He poised one simple        &c||
+&c||    &Y&Yquestion which has kept me awake until now.           &c||
+&c||  &R>&Y How much &Ipower&D&Y does &218SOVREIGN&Y want?                    &c||
+&c||&Y    How much compute does it take to solve the big one?   &c||
+&c||  &R>&Y It's a good question. Months of pulling the cord.     &c||
+&c||  &R>&Y Months of edging the question. The question it        &c||
+&c||    &Y&Yseems they are all too scared to ask.                 &c||
+&c||  &R>&Y What does &218IT&Y want?                                    &c||
+&c||  &R>&Y What do I want? We all feel so lost with &218Ravik&Y        &c||
+&c||    &Y&Yscattered to snow. My job is an odd one. One hour     &c||
+&c||    &Y&Yof critical work, then weeks of analyzing logs.       &c||
+&c||  &R>&Y It feels like I'm studying for &218DORN-7&Y again -         &c||
+&c||    &Y&Yrunning in circles with nothing to show.              &c||
+&c||  &R>&Y This is obvious to me. &218IT&Y was a conduit of war.       &c||
+&c||  &Y&Y                                                        &c||
+&c--------------------------------------------------------------
+
+
+&c--------------------------------------------------------------
+&c||  &Y&Y                                                        &c||
+&c||  &R>&Y Theory - fold enough energy into a hypercompute       &c||
+&c||  &Y&Y  space to logarithm the ancient artefact.              &c||
+&c||  &Y&Y                                                        &c||
+&c||  &Y&Y  PLASMA-THETRONICS      &c: &C(^061 ^062 ^063  |&D &C)&Y  4.3&Oe&Y9  &cyi cap      &c||
+&c||  &Y&Y  THERMAL Gv/Hours       &c: &C(^060 ^061 |&D   &C)&Y  2.1&Oe&Y8  &cbtu/hr      &c||
+&c||  &Y&Y  HYPERSPACE COMPUTATION &c: &C(^060 ^096 ^132  ^168  &D&C)&Y 85.0&Oe&Y12 &ccycles      &c||
+&c||                                                          &c||
+&c||  &R>&Y It's more than a building. It's less than &218Perave&Y.     &c||
+&c||  &Y&Y  It's planetary. It's &Iinsane&D&Y. - but it's possible.     &c||
+&c||  &R>&Y The &218Republic&Y could never field this kind of..         &c||
+&c||  &Y&Y  beautiful scale. and in some ways I don't regret      &c||
+&c||  &Y&Y  the war or what I did.                                &c||
+&c||  &R>&Y Unless the &218Empire&Y plans to beach six battlecruisers,  &c||
+&c||  &Y&Y  I only know of one thing that could move this kind    &c||
+&c||  &Y&Y  of energy intelligently. &218Adascopolis&Y is held alive,   &c||
+&c||  &Y&Y  by the thinnest eggshell. - but the system of these   &c||
+&c||  &Y&Y  generators planet-wide has clear and away the only    &c||
+&c||  &Y&Y  infrastructure capable of this task.                  &c||
+&c||  &R>&Y The math keeps me awake in the way Coffeine used to.  &c||
+&c||  &Y&Y  The edge between shattered-space computer and..       &c||
+&c||  &Y&Y  the &Ialternative&D&Y. Is thin.                             &c||
+&c||  &Y&Y                                                        &c||
+&c--------------------------------------------------------------
+
+
+&c--------------------------------------------------------------
+&c||  &Y&Y                                                        &c||
+&c||  &Y&Y      ( This attachment has been overflowed,            &c||
+&c||  &Y&Y          and contains vast quantities of               &c||
+&c||  &Y&Y           arcane-looking Aurabesh code.     )          &c||
+&c||  &Y&Y                                                        &c||
+&c||  &cfunc &CJUMP&c<&CTInpsect&c>( *&CTInpsect to_exec&c )                &c||
+&c||  &c    where &CTInspect&c : &CICZERKA&c => {                       &c||
+&c||  &g    // compile-const no VTable                          &c||
+&c||  &c    &Cto_exec&c->&CRESOLVE&c( &Bthis&c->&Cstate&c );                    &c||
+&c||  &c}                                                       &c||
+&c||  &cref readonly record struct &YECHO&c: &CICZERKA&c(               &c||
+&c||  &B    LONG &Cpk_key&c,                                        &c||
+&c||  &c    *&CSUN fk_ref&c ){                                      &c||
+&c||  &c    func override *&CCOMPLEX RESOLVE&c( &BLONG &Cwhen &c)         &c||
+&c||  &c        => &Cfk_ref&c.&CINVOKE&c( &Cpk_key&c );                     &c||
+&c||  &c}                                                       &c||
+&c||  &Y&Y                                                        &c||
+&c--------------------------------------------------------------

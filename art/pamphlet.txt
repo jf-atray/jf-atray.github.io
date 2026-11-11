@@ -1,0 +1,20 @@
+&160a &222th&221ree&160-&112ton&106e &196pr&196opag&202anda &160pamphlet
+&202A crisp pape&196r pamphlet in hues of red and accents of gold. The front matter
+&203i&202ncludes a la&196rge side-profile print of a Gamorrean, under which bold bright
+&203go&202lden text de&196clares, &W"&221Workers galaxy, unite!&W" &196In a smaller subtitle, it is
+&203fol&202lowed by &W"&221Only lose chain.&W" &196The footer lists channel seven for questions
+&203The &202reverse-side&196 is full of more floral language attributed to Premier Rini
+&W" &128We must have faith in the people,  and we must have faith in the party. &W"
+&203The pl&202ain-print of&196 this side features insets of Ryloth and smiling twi'leks
+&W" &128Changes in society stem from contradictions.  The dialetics of class, the
+&128evolution of production, the contradiction of old and new set the future. &W"
+
+descitem propaganda;;/c;;&202A crisp pape&196r pamphlet in hues of red and accents of gold. The front matter
+&203i&202ncludes a la&196rge side-profile print of a Gamorrean, under which bold bright
+&203go&202lden text de&196clares, &W"&221Workers galaxy, unite!&W" &196In a smaller subtitle, it is
+&203fol&202lowed by &W"&221Only lose chain.&W" &196The footer lists channel seven for questions
+&203The &202reverse-side&196 is full of more floral language attributed to Premier Rini
+&W" &128We must have faith in the people,  and we must have faith in the party. &W"
+&203The pl&202ain-print of&196 this side features insets of Ryloth and smiling twi'leks
+&W" &128Changes in society stem from contradictions.  The dialetics of class, the
+&128evolution of production, the contradiction of old and new set the future. &W";;/s;;makeclothing hold &160a &222th&221ree&160-&112ton&106e &196pr&196opag&202anda &160pamphlet

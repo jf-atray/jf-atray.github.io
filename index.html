@@ -1,0 +1,19 @@
+---
+layout: default
+title: home
+---
+<p>a blog an some colored text i made. <a href="{{ '/pieces.html' | relative_url }}">the gallery</a> is this way.</p>
+
+<h2>recent posts</h2>
+<ul>
+{% for p in site.posts limit:5 %}
+  <li>{{ p.date | date: "%Y-%m-%d" }} — <a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
+<h2>pieces</h2>
+<ul>
+{% for p in site.pieces %}
+  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>

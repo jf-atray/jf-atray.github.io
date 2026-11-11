@@ -1,0 +1,65 @@
+
+
+&179   Defi&180nin&196g&197 w&198eathered horns. A ghastly fit &197si&196l&180hou&179ette
+&179  &179with&180 a &196g&197rim nose and lips&198.&197 His eyes are shar&196p&180 je&179wels
+&179 unde&180r a&196n&197 aged creased brow&198.&197 His tone has the l&196i&180lt &179of a
+&179 hig&180h-b&196o&197rn Alderaan flavour&198.&197 Dominating his outl&196i&180ne &179are
+&179 a se&180t o&196f&197 massive ram horns&198,&197 oak colored and t&196wi&180ste&179d in&197.
+ &214P&220r&226o&228fes&226s&220o&214r &197Clemency &D&197&ICrofts&D
+
+
+
+&214P&220r&226o&228fes&226s&220o&214r &198&IClemency &D&197Crofts
+
+   XXXXXXXXXXXXXXXXXXXXXXXX, XXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXX. XXXXXXXXXXXXXXXXXXXXXXXXX
+ XXXXXXXXXXXXXXXXXXXXXXXXXX. XXXXXXXXXXXXXXXXXXXXXXXXXX
+ XXXXXXXXXXXXXXXXXXXXXXXXXX. XXXXXXXXXXXXXXXXXXXXXXXXXX
+ XXXXXXXXXXXXXXXXXXXXXXXXXX. XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXX, XXXXXXXXXXXXXXXXXXXXXXXX
+Defining weathered horns. A ghastly man silhouette
+XXXXXXXXXXXXXXXXXXXXXXXXX. XXXXXXXXXXXXXXXXXXXXXXXXX
+with a grim nose and lips. His eyes are sharp jewels
+XXXXXXXXXXXXXXXXXXXXXXXXXX. XXXXXXXXXXXXXXXXXXXXXXXXXX
+under an aged creased brow. His tone has the lilt of a
+XXXXXXXXXXXXXXXXXXXXXXXXXX. XXXXXXXXXXXXXXXXXXXXXXXXXX
+highborn alderaanian taste. Dominating his outline are
+XXXXXXXXXXXXXXXXXXXXXXXXXX. XXXXXXXXXXXXXXXXXXXXXXXXXX
+two over-sized aries horns: oak colored and twisted in.
+
+
+&g[]&094==&178The G&179alactic Re&180public &178D&179atan&180et File &178#&180557&178-&180CTC&094=================&g[]
+[]&094==============================================================&g[]
+[|&178      ,    ,^.    .       &g| 
+[|&178    ,'|  _ \ / _  |`.     &g| &178B&180irthname:&W   Whin'thier Crofts
+&g[|&178   / /  `.\| |/,'  \ \    &g| &178A&180lias:&W      'Clemency' Crofts 
+&g[|&178  / :     `. ,'     : \   &g| &178G&180ender:&W      Male
+&g[|&179 :  |      | |      |  :  &g| &178A&180ge: &W        44
+&g[|&179 |  :      : :      :  |  &g| &178S&180pecies: &W    Devaronian
+&g[|&179 :   `.__,'   `.__,'   :  &g| &178N&180ationality: &WCorellian  
+&g[|&179  \                   /   &g|                 
+[|&179   \                 /    &g| 
+[|&180    `.             ,'     &g|          
+[|&180      `-._______,-'       &g| 
+[|_________________________/ 
+[]&094====&178E&179MPLOYMENT H&180ISTORY&094========================================&g[]
+  &088Czer&124ka&203 A&209rm&216s a&222nd&229 Enginee&222rin&216g  &W- Commander of Security
+  &088Czer&124ka&203 A&209rm&216s a&222nd&229 Enginee&222rin&216g  &W- Security Guard
+
+ &W Corellia Technical College - Professor, Galactic Basic & Prose  &g
+                             &W- &197x Permanently Closed x&g
+[]&094====&178P&179ERSONAL HIS&180TORICAL DATA&094==================================&g[]
+&W  A contributer to the Imperial Archaeology wartime effort,
+  Crofts stacked up a massive pile of papers and awards for his
+  work and obsession into the ancient cultures being studied.
+  He never did achieve his dream of understanding the language.
+&W  Once a well renowned teacher from what was once a well funded
+  school. Crofts built a distinguished career on both teaching
+  advanced courses on Galactic Basic, literature and a hobby
+  for xenolinguistics and ancient languages.
+  Born to landowners on Alderaan, he has a taste for the finer
+  things such a wine and library archives.
+&g[]&094==============================================================&g[]
