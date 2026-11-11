@@ -152,6 +152,17 @@ body.caps-l .xterm-fig figcaption {
 }
 .cap .cap-t { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; color: #999; }
 
+/* marginalia: lx: marg reserves a left gutter, notes hang in
+   it. kin to the figure margin captions */
+body.marg .col { padding-left: 18ch; }
+.margin-note { float: left; clear: left; width: 15ch; margin-left: -18ch;
+               font-size: 13px; line-height: 1.4; color: #777; }
+@media (max-width: 900px) {
+  body.marg .col { padding-left: 0; }
+  .margin-note { float: none; display: block; width: auto; margin: 0 0 1ch 2ch;
+                 padding-left: 1ch; border-left: 2px solid #222; }
+}
+
 section.piece { margin-bottom: 5ch; }
 section.piece h2::before { content: none; }
 section.piece h2 a { color: #888; text-decoration: none; }
