@@ -27,6 +27,10 @@ own divider walls.
 - `map.html`, drawn by `_plugins/sitemap.rb` from
   `_data/map.yml`. new pages go in the data file or the build
   warns they are unmapped.
+- `guestbook.html` wall, replies to the bsky post named by
+  `guestbook_post` in `_config.yml`, fetched at build by
+  `_plugins/guestbook.rb`. `_data/guestbook.json` is its own
+  cache so a dead api never blanks the wall.
 
 ## props
 
