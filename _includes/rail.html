@@ -6,6 +6,16 @@
    <a href="{{ '/about/now.html' | relative_url }}">now</a> ·
    <a href="{{ '/shrine.html' | relative_url }}">shrine</a> ·
    <a href="{{ '/guestbook.html' | relative_url }}">say hi</a></p>
+{% if page.layout == 'piece' %}
+{% assign wing = site.pieces | where: "era", page.era %}
+<h3>this wing</h3>
+<p><a href="{{ '/pieces/era-' | append: page.era | append: '.html' | relative_url }}">era {{ page.era }}</a> — {{ wing.size }} works</p>
+{% endif %}
+{% if page.layout == 'post' %}
+<h3>archive</h3>
+{% assign yrs = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+<p>{% for y in yrs %}{{ y.name }} · {{ y.size }}{% unless forloop.last %} / {% endunless %}{% endfor %}</p>
+{% endif %}
 <h3>daily</h3>
 <p>tonights pick — <a href="{{ potd.url | relative_url }}">{{ potd.title }}</a></p>
 <p>latest post — <a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></p>

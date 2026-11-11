@@ -63,8 +63,10 @@ h1, h2, h3, nav, footer {
   font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
 }
 h1, h2, h3 { color: #d8d8d8; font-weight: normal; }
-h2 { border-bottom: 1px solid #1b1b1d; padding-bottom: .4ch; }
+h1 { font-size: 1.55em; letter-spacing: .4px; }
+h2 { font-size: 1.15em; border-bottom: 1px solid #1b1b1d; padding-bottom: .4ch; }
 h2::before { content: "* "; color: #555; }
+h3 { font-size: 1em; }
 
 hr { border: 0; border-top: 1px solid #2a2a2c; margin: 4ch 0; }
 
