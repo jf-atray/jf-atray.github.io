@@ -34,13 +34,17 @@ body {
   background: var(--bg);
   color: var(--ink);
   font: 16px/1.5 Georgia, "Times New Roman", serif;
-  max-width: 118ch;
-  margin: 0 auto;
+  /* the page is three tracks: gutter, content, gutter. the frs
+     share leftover 2:1 so the rail side stays the thinner blank,
+     an collapse to nothing on narrow windows. the content track
+     holds the full footprint: 100ch col + 4ch gap + 31ch rail */
+  display: grid;
+  grid-template-columns: 2fr minmax(0, 135ch) 1fr;
   padding: 2ch;
 }
+body > * { grid-column: 2; }
 
-/* the page is wider than the measure. prose column plus a
-   furniture rail */
+/* prose column plus a furniture rail */
 main { display: flex; flex-wrap: wrap; gap: 4ch; align-items: flex-start; }
 .col { flex: 1; min-width: min(45ch, 100%); }
 .rail {
@@ -190,7 +194,7 @@ body.caps-l .xterm-fig figcaption {
   position: absolute; right: 100%; top: 0;
   width: 16ch; margin: 0 3ch 0 0;
 }
-@media (max-width: 150ch) {
+@media (max-width: 175ch) {
   .xterm-fig.cap-l figcaption, .xterm-fig.cap-r figcaption,
   body.caps-l .xterm-fig figcaption {
     position: static; width: auto; margin: 1ch 0 0; text-align: right;
