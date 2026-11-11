@@ -197,6 +197,7 @@ footer {
   font-size: 13px;
   border-top: 1px solid #2a2a2c;
 }
+.hitcounter { vertical-align: middle; }
 .btn88 {
   display: inline-block;
   width: 88px;
