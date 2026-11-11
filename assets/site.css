@@ -140,15 +140,16 @@ p.crumb a { color: var(--dimmer); text-decoration: none; }
 p.crumb a:hover { color: var(--amber); text-decoration: underline; }
 
 pre.xterm {
-  font: 14px/1.2 ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font: 16px/1.2 ui-monospace, "Cascadia Mono", Consolas, monospace;
   overflow-x: clip; /* no scrollbars, ever. width classes fit first */
 }
-/* font steps down for wide pieces so they never need the clip */
-pre.xterm.w-m { font-size: 13px; }
-pre.xterm.w-l { font-size: 12px; }
+/* font steps down for wide pieces so they never need the clip.
+   14px is the floor */
+pre.xterm.w-m { font-size: 15px; }
+pre.xterm.w-l { font-size: 14px; }
 @media (max-width: 640px) {
-  pre.xterm.w-m { font-size: 11px; }
-  pre.xterm.w-l { font-size: 9px; }
+  pre.xterm.w-m { font-size: 13px; }
+  pre.xterm.w-l { font-size: 11px; }
 }
 /* overdraw: inline padding paints bg past the line box,
    killing hairline stripes between backgrounded rows */
