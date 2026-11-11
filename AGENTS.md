@@ -24,6 +24,9 @@ own divider walls.
 - `index.html` whats-new — lifted from `git log` subjects at
   build time by `_plugins/news.rb`. the commit voice is the
   news voice.
+- `map.html` — drawn by `_plugins/sitemap.rb` from
+  `_data/map.yml`. new pages go in the data file or the build
+  warns they are unmapped.
 
 ## props
 
