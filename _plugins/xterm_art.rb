@@ -104,7 +104,7 @@ module Jekyll
     # docs.find per render turns quadratic around a thousand.
     def self.doc_for(site, slug)
       @docmap ||= {}
-      docs = (@docmap[site.object_id] ||= site.collections['pieces']&.docs&.to_h { |d| [d.slug, d] })
+      docs = (@docmap[site.object_id] ||= site.collections['pieces']&.docs&.to_h { |d| [d.data['slug'], d] })
       docs&.[](slug)
     end
 
