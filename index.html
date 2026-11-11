@@ -1,19 +1,18 @@
 ---
 layout: default
-title: home
+title: welcome
+feature: crofts
 ---
-<p>a blog an some colored text i made. <a href="{{ '/pieces.html' | relative_url }}">the gallery</a> is this way.</p>
+<p>a blog an some colored text i made. the gallery is
+<a href="{{ '/pieces.html' | relative_url }}">this way</a>,
+the words are under <a href="{{ '/posts.html' | relative_url }}">posts</a>,
+an the guestbook is open if u want to scratch ur name in.</p>
 
-<h2>recent posts</h2>
-<ul>
-{% for p in site.posts limit:5 %}
-  <li>{{ p.date | date: "%Y-%m-%d" }} — <a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-{% endfor %}
-</ul>
+{% xterm_file page.feature %}
 
-<h2>pieces</h2>
-<ul>
-{% for p in site.pieces %}
-  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+<h2>whats new</h2>
+<ul class="news">
+{% for n in site.data.news limit:8 %}
+  <li>{{ n.date }} — {{ n.msg | escape }}</li>
 {% endfor %}
 </ul>
