@@ -24,6 +24,11 @@ main { display: flex; flex-wrap: wrap; gap: 4ch; align-items: flex-start; }
 .rail h3 { font-size: 14px; color: #999; margin: 0 0 1ch; }
 .rail p { margin: 0 0 1.5ch; }
 
+/* the corridor through the collection, prev left next right */
+.ribbon { display: flex; justify-content: space-between; margin-top: 3ch;
+          font-size: 14px; }
+.inviews { font-size: 14px; color: #777; }
+
 /* stacked narrow: the rail lands below content an swaps its
    side border for a top one */
 @media (max-width: 900px) {

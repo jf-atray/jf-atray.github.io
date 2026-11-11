@@ -211,10 +211,16 @@ module Jekyll
       mark = doc.data['date']
       mark = mark.strftime('%Y-%m-%d') if mark.respond_to?(:strftime)
       mark ||= doc.data['era'] if doc.data['era'] =~ /\A[\d.\/-]+\z/
-      cap = %(<span class="cap-t">#{doc.data['title']}</span>)
-      cap += %( — #{mark}) if mark
+      # the piece page itself already h1s the title — the
+      # caption there only needs the datemark an the link.
+      # parts join so nothing renders a leading separator
+      parts = []
+      parts << %(<span class="cap-t">#{doc.data['title']}</span>) unless context.registers[:page]['layout'] == 'piece'
+      parts << mark if mark
+      cap = parts.join(' — ')
+      cap += ' · ' unless cap.empty?
       cls = %w[left right].include?(@cap) ? %(xterm-fig cap-#{@cap[0]}) : 'xterm-fig'
-      %(<figure class="#{cls}">#{pre}<figcaption class="cap">#{cap} · <a href="#{site.baseurl}/art/#{name}">source</a></figcaption></figure>)
+      %(<figure class="#{cls}">#{pre}<figcaption class="cap">#{cap}<a href="#{site.baseurl}/art/#{name}">source</a></figcaption></figure>)
     end
   end
 end

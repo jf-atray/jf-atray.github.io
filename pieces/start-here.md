@@ -2,6 +2,7 @@
 title: start here
 permalink: /pieces/start-here.html
 parent: /pieces.html
+pieces: [droid, brassk, sov]
 ---
 
 {% include views.html dir="/pieces/" index="/pieces.html" %}

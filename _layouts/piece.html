@@ -1,6 +1,30 @@
 ---
 layout: default
 ---
-<article>
+<article class="piece-page">
 {{ content }}
 </article>
+{% comment %} the ribbon: collection order is the walk order,
+    same as the daily tour. a piece page is a corridor {% endcomment %}
+{% assign cur = 0 %}
+{% for p in site.pieces %}
+  {% if p.slug == page.slug %}{% assign cur = forloop.index0 %}{% endif %}
+{% endfor %}
+{% assign pi = cur | minus: 1 %}
+{% assign ni = cur | plus: 1 %}
+<nav class="ribbon">
+  {% if pi >= 0 %}<a href="{{ site.pieces[pi].url | relative_url }}">← {{ site.pieces[pi].title }}</a>{% else %}<span></span>{% endif %}
+  {% if ni < site.pieces.size %}<a href="{{ site.pieces[ni].url | relative_url }}">{{ site.pieces[ni].title }} →</a>{% endif %}
+</nav>
+{% comment %} the lattice: hand views declare pieces: in front
+    matter, era walls match on era. where a piece hangs {% endcomment %}
+{% assign links = "" %}
+{% assign sep = "" %}
+{% for v in site.pages %}
+  {% if v.pieces contains page.slug or (v.layout == "era" and v.era == page.era) %}
+    {% capture l %}{{ sep }}<a href="{{ v.url | relative_url }}">{{ v.title }}</a>{% endcapture %}
+    {% assign links = links | append: l %}
+    {% assign sep = " · " %}
+  {% endif %}
+{% endfor %}
+{% if links != "" %}<p class="inviews">hangs in: {{ links }}</p>{% endif %}
