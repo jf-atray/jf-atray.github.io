@@ -1,8 +1,36 @@
-/* dark quiet frame. the art is the color, the page is the wall. */
+/* dark quiet frame. the art is the color, the page is the wall.
+   every surface an line on the site draws from these tokens —
+   a line is --hairline or --hairline-warm, nothing else. */
+:root {
+  /* surfaces */
+  --bg: #0d0d0f;
+  --panel: #161618;
+
+  /* ink ramp, bright to quiet */
+  --ink-hi: #d8d8d8;
+  --ink: #b8b8b8;
+  --faint: #999;
+  --dim: #777;
+  --dimmer: #555;
+
+  /* the line language */
+  --line: #2a2a2c;
+  --line-warm: #3d3420;
+  --branch: #3a3a3d;
+  --ridge: #666;
+  --hairline: 1px solid var(--line);
+  --hairline-warm: 1px solid var(--line-warm);
+
+  /* accents */
+  --amber: #ffd479;
+  --amber2: #ffb347;
+  --blue: #7db8ff;
+  --violet: #b48fff;
+}
 
 body {
-  background: #0d0d0f;
-  color: #b8b8b8;
+  background: var(--bg);
+  color: var(--ink);
   font: 16px/1.5 Georgia, "Times New Roman", serif;
   max-width: 118ch;
   margin: 0 auto;
@@ -16,32 +44,32 @@ main { display: flex; flex-wrap: wrap; gap: 4ch; align-items: flex-start; }
 .rail {
   width: 28ch;
   flex: none;
-  border-left: 1px solid #161618;
+  border-left: var(--hairline);
   padding-left: 3ch;
   font-size: 14px;
-  color: #777;
+  color: var(--dim);
 }
-.rail h3 { font-size: 14px; color: #999; margin: 0 0 1ch; }
+.rail h3 { font-size: 14px; color: var(--faint); margin: 0 0 1ch; }
 .rail p { margin: 0 0 1.5ch; }
 
 /* the generated site map: amber sections, grey leaves,
    dim branches, notes in the quiet column */
-.sm-r { color: #ffd479; }
-.sm-b { color: #3a3a3d; }
-.sm-n { color: #ffb347; }
-.sm-l { color: #d8d8d8; }
-.sm-z { color: #777; }
+.sm-r { color: var(--amber); }
+.sm-b { color: var(--branch); }
+.sm-n { color: var(--amber2); }
+.sm-l { color: var(--ink-hi); }
+.sm-z { color: var(--dim); }
 .sitemap a { color: inherit; }
 
 /* the corridor through the collection, prev left next right */
 .ribbon { display: flex; justify-content: space-between; margin-top: 3ch;
           font-size: 14px; }
-.inviews { font-size: 14px; color: #777; }
+.inviews { font-size: 14px; color: var(--dim); }
 
 /* stacked narrow: the rail lands below content an swaps its
    side border for a top one */
 @media (max-width: 900px) {
-  .rail { width: 100%; border-left: 0; border-top: 1px solid #161618;
+  .rail { width: 100%; border-left: 0; border-top: var(--hairline);
           padding-left: 0; padding-top: 2ch; }
 }
 
@@ -61,31 +89,31 @@ main { display: flex; flex-wrap: wrap; gap: 4ch; align-items: flex-start; }
 @media (max-width: 150ch) { .sky { display: none; } }
 
 /* web1 link semantics, shifted for a dark wall */
-a { color: #7db8ff; text-decoration-style: dotted; }
-a:visited { color: #b48fff; }
-a:hover { color: #ffd479; }
+a { color: var(--blue); text-decoration-style: dotted; }
+a:visited { color: var(--violet); }
+a:hover { color: var(--amber); }
 
 /* the sites own amber, on select */
-::selection { background: #ffd479; color: #0d0d0f; }
+::selection { background: var(--amber); color: var(--bg); }
 
 h1, h2, h3, nav, footer {
   font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
 }
-h1, h2, h3 { color: #d8d8d8; font-weight: normal; }
+h1, h2, h3 { color: var(--ink-hi); font-weight: normal; }
 h1 { font-size: 1.55em; letter-spacing: .4px; }
-h2 { font-size: 1.15em; border-bottom: 1px solid #1b1b1d; padding-bottom: .4ch; }
-h2::before { content: "* "; color: #555; }
+h2 { font-size: 1.15em; border-bottom: var(--hairline); padding-bottom: .4ch; }
+h2::before { content: "* "; color: var(--dimmer); }
 h3 { font-size: 1em; }
 
-hr { border: 0; border-top: 1px solid #2a2a2c; margin: 4ch 0; }
+hr { border: 0; border-top: var(--hairline); margin: 4ch 0; }
 
 header pre.xterm { margin: 0; }
 
 nav {
   margin: 1ch 0 3ch;
   padding-bottom: 1.2ch;
-  color: #555;
-  border-bottom: 1px solid #3d3420; /* the one colored line */
+  color: var(--dimmer);
+  border-bottom: var(--hairline-warm); /* the one colored line */
 }
 nav a { text-decoration: none; }
 nav a:hover { text-decoration: underline; }
@@ -102,8 +130,8 @@ p.crumb {
   font-size: 13px;
   margin-top: 4ch;
 }
-p.crumb a { color: #666; text-decoration: none; }
-p.crumb a:hover { color: #ffd479; text-decoration: underline; }
+p.crumb a { color: var(--dimmer); text-decoration: none; }
+p.crumb a:hover { color: var(--amber); text-decoration: underline; }
 
 pre.xterm {
   font: 14px/1.2 ui-monospace, "Cascadia Mono", Consolas, monospace;
@@ -121,7 +149,7 @@ pre.xterm.w-l { font-size: 12px; }
 pre.xterm b { padding: 1px 0; }
 pre.xterm .it { font-style: italic; }
 pre.xterm .ul { text-decoration: underline; }
-pre.xterm .kw { color: #ffd479; }
+pre.xterm .kw { color: var(--amber); }
 /* a piece treated as an image: art on one side, its placard on the other.
    .flip puts the placard left. wraps under narrow windows. */
 section.exhibit {
@@ -136,14 +164,14 @@ section.exhibit pre.xterm { margin: 0; }
 section.exhibit .placard { flex: 1; min-width: 22ch; }
 section.exhibit .placard h3 { margin-top: 0; }
 section.exhibit ~ section.exhibit {
-  border-top: 1px solid #141416;
+  border-top: var(--hairline);
   padding-top: 4ch;
 }
 
 /* museum caption. figure keeps the
    art an its label stacked as one unit inside flex rows */
 .xterm-fig { margin: 0; width: fit-content; max-width: 100%; position: relative; }
-.cap { text-align: right; color: #777; font-size: 14px; margin-top: 1ch; }
+.cap { text-align: right; color: var(--dim); font-size: 14px; margin-top: 1ch; }
 /* caption in a margin instead of under the art */
 .xterm-fig.cap-l figcaption, .xterm-fig.cap-r figcaption {
   position: absolute; top: 0; width: 16ch; margin: 0;
@@ -161,27 +189,27 @@ body.caps-l .xterm-fig figcaption {
     position: static; width: auto; margin: 1ch 0 0; text-align: right;
   }
 }
-.cap .cap-t { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; color: #999; }
+.cap .cap-t { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; color: var(--faint); }
 
 /* marginalia: lx: marg reserves a left gutter, notes hang in
    it. kin to the figure margin captions */
 body.marg .col { padding-left: 18ch; }
 .margin-note { float: left; clear: left; width: 15ch; margin-left: -18ch;
-               font-size: 13px; line-height: 1.4; color: #777; }
+               font-size: 13px; line-height: 1.4; color: var(--dim); }
 @media (max-width: 900px) {
   body.marg .col { padding-left: 0; }
   .margin-note { float: none; display: block; width: auto; margin: 0 0 1ch 2ch;
-                 padding-left: 1ch; border-left: 2px solid #222; }
+                 padding-left: 1ch; border-left: 2px solid var(--line); }
 }
 
 section.piece { margin-bottom: 5ch; }
 section.piece h2::before { content: none; }
-section.piece h2 a { color: #888; text-decoration: none; }
-section.piece h2 a:hover { color: #ffd479; }
+section.piece h2 a { color: var(--faint); text-decoration: none; }
+section.piece h2 a:hover { color: var(--amber); }
 section.project { margin-bottom: 5ch; }
 section.project iframe {
-  background: #161618;
-  border: 1px solid #333;
+  background: var(--panel);
+  border: var(--hairline);
   max-width: 100%;
 }
 iframe.game {
@@ -193,11 +221,11 @@ iframe.game {
 footer {
   margin-top: 6ch;
   padding-top: 2ch;
-  color: #555;
+  color: var(--dimmer);
   font-size: 13px;
-  border-top: 1px solid #2a2a2c;
+  border-top: var(--hairline);
 }
-.hitcounter { vertical-align: middle; }
+.hitcounter { vertical-align: middle; border: var(--hairline-warm); }
 .btn88 {
   display: inline-block;
   width: 88px;
@@ -205,7 +233,7 @@ footer {
   line-height: 31px;
   text-align: center;
   font-size: 10px;
-  color: #888;
-  border: 2px ridge #666;
-  background: #161618;
+  color: var(--faint);
+  border: 2px ridge var(--ridge);
+  background: var(--panel);
 }
