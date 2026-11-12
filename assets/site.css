@@ -218,7 +218,7 @@ section.exhibit ~ section.exhibit {
 .cap-t { display: block; }
 /* caption in a margin instead of under the art */
 .xterm-fig.cap-l figcaption, .xterm-fig.cap-r figcaption {
-  position: absolute; top: 0; width: 16ch; margin: 0;
+  position: absolute; top: 33%; width: 16ch; margin: 0;
 }
 .xterm-fig.cap-l figcaption { right: 100%; margin-right: 1ch; }
 .xterm-fig.cap-r figcaption { left: 100%; margin-left: 3ch; text-align: left; }
