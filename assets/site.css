@@ -167,15 +167,20 @@ p.crumb a:hover { color: var(--amber); text-decoration: underline; }
 
 pre.xterm {
   font: 16px/1.2 ui-monospace, "Cascadia Mono", Consolas, monospace;
-  overflow-x: clip; /* no scrollbars, ever. width classes fit first */
+  overflow-x: clip; /* no scrollbars on wide screens, ever */
 }
 /* font steps down for wide pieces so they never need the clip.
    14px is the floor */
 pre.xterm.w-m { font-size: 15px; }
 pre.xterm.w-l { font-size: 14px; }
+/* a phone cant shrink: the floor holds an the art pans instead.
+   a figure that fits shows no scrollbar, only the oversized
+   pieces get a window to drag inside */
 @media (max-width: 640px) {
-  pre.xterm.w-m { font-size: 13px; }
-  pre.xterm.w-l { font-size: 11px; }
+  pre.xterm { overflow-x: auto; }
+  /* flex items refuse to shrink below their content by default;
+     release them so the pan window can exist inside exhibits */
+  .xterm-fig, section.exhibit pre.xterm { min-width: 0; }
 }
 /* overdraw: inline padding paints bg past the line box,
    killing hairline stripes between backgrounded rows */
