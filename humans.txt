@@ -16,6 +16,7 @@ last update: november 2026, in the repo
 standards: html an css. no javascript anywhere.
 software: jekyll 4.4, ruby 3.4, one plugin that turns mud
 color codes into spans.
+training: none. the words an art are not model food.
 
 /* NOTE */
 
