@@ -206,9 +206,15 @@ module Jekyll
       alabel = CGI.escapeHTML("#{doc.data['title']}. hand colored text")
       pre = %(<pre class="xterm #{XtermArt.wclass(src)}" role="img" aria-label="#{alabel}">#{body}</pre>)
       # datemark is a bare date or nothing; non date values
-      # like "uncatalogued" never reach the label
-      mark = doc.data['date']
-      mark = mark.strftime('%Y-%m-%d') if mark.respond_to?(:strftime)
+      # like "uncatalogued" never reach the label. date only
+      # counts when the author wrote it in the file: jekyll
+      # backfills data['date'] w mtimes for the collection
+      # sort, an mtime aint a museum label.
+      fm = File.read(doc.path)
+      if fm =~ /\A---.*?^date\s*:/m
+        mark = doc.data['date']
+        mark = mark.strftime('%Y-%m-%d') if mark.respond_to?(:strftime)
+      end
       mark ||= doc.data['era'] if doc.data['era'] =~ /\A[\d.\/-]+\z/
       # the piece page itself already h1s the title. the
       # caption there only needs the datemark an the link.
