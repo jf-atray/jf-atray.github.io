@@ -3,6 +3,19 @@ description: ascii art an blog
 url: https://www.jonf.blog
 markdown: kramdown
 
+# the page is ascii, typed text passes through untouched:
+# straight quotes stay straight, -- stays --, ... stays ...
+kramdown:
+  smart_quotes: [39, 39, 34, 34]
+  typographic_symbols:
+    hellip: "..."
+    mdash: "---"
+    ndash: "--"
+    laquo: "<<"
+    raquo: ">>"
+    laquo_space: "<< "
+    raquo_space: " >>"
+
 collections:
   pieces:
     output: true
