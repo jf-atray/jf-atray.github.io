@@ -221,6 +221,11 @@ section.exhibit ~ section.exhibit {
 }
 .xterm-fig.cap-l figcaption { right: 100%; margin-right: 1ch; }
 .xterm-fig.cap-r figcaption { left: 100%; margin-left: 3ch; text-align: left; }
+
+/* museum comments. folded under the piece, open if u care */
+details.comments { margin-top: 2.5ch; font-size: 14px; color: var(--dim); }
+details.comments summary { cursor: pointer; color: var(--dimmer); }
+details.comments .who { color: var(--amber-dim); margin-right: 1ch; }
 /* piece pages ride caps left by default, graduated from l4 */
 body.caps-l .xterm-fig figcaption {
   position: absolute; right: 100%; top: 0;

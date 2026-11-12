@@ -52,6 +52,9 @@ build. set `xterm_max_strict: true` to make em fail instead.
   `cap:right` for margin captions, `{% xterm %}` works inline.
   the ribbon walks filename order; renaming a file reorders
   the gallery. view pages list slugs, the piece names nothing.
+  `comments:` (list of `who:` + `text:`) puts a folded
+  museum-comments block under the piece on its own page.
+  walls an catalogue dont show em.
 - an era wall: `pieces/era-X.md` w `layout: era` an `era: X`.
   it lists its own pieces, needs no body.
 - a recipe: `_recipes/slug.md` w `title:`. the pantry page

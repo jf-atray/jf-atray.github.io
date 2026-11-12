@@ -3,6 +3,14 @@ layout: default
 ---
 <article class="piece-page">
 {{ content }}
+{% if page.comments %}
+<details class="comments">
+<summary>comments</summary>
+{% for c in page.comments %}
+<p class="comment"><span class="who">{{ c.who }}</span> {{ c.text }}</p>
+{% endfor %}
+</details>
+{% endif %}
 </article>
 {% comment %} the ribbon: collection order is the walk
     order. a piece page is a corridor u walk {% endcomment %}
