@@ -215,6 +215,7 @@ section.exhibit ~ section.exhibit {
    art an its label stacked as one unit inside flex rows */
 .xterm-fig { margin: 0; width: fit-content; max-width: 100%; position: relative; }
 .cap { text-align: right; color: var(--dim); font-size: 14px; margin-top: 1ch; }
+.cap-t { display: block; }
 /* caption in a margin instead of under the art */
 .xterm-fig.cap-l figcaption, .xterm-fig.cap-r figcaption {
   position: absolute; top: 0; width: 16ch; margin: 0;
