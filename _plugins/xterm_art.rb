@@ -16,9 +16,9 @@ module Jekyll
     }.freeze
     RE = /(&&|\^#[0-9a-fA-F]{6}|\^\d{3}|&\d{1,3}\.\d{1,3}\.\d{1,3}|&#[0-9a-fA-F]{6}|&\d{3}|&[^\s])/m
 
-    # how many visible columns a token adds. nil = plain text,
-    # measured by the caller since it can hold newlines.
-    # mirrors render()'s dispatch; both must agree forever.
+    # visible cols per token. nil = plain text, the caller
+    # measures those cause they can hold newlines. mirrors
+    # render()'s dispatch, they agree forever or we argue.
     def self.vis_len(tok)
       case tok
       when '&&' then 1
@@ -45,8 +45,8 @@ module Jekyll
       ws
     end
 
-    # the belt for line length: warn on every over long line,
-    # xterm_max_strict in config makes it refuse the build.
+    # the line length cop. warns on every fat line an
+    # xterm_max_strict makes it say nope an kill the build.
     def self.check(src, label, site)
       max = site.config['xterm_max_width'].to_i
       return if max <= 0
@@ -58,10 +58,10 @@ module Jekyll
       raise "nope: #{label} too wide" if site.config['xterm_max_strict']
     end
 
-    # autowrap: over long lines break at the last space before
-    # the limit (hard cut if a single word fills it). color
-    # state carries across inserted newlines for free because
-    # render() never resets state at line breaks.
+    # autowrap. fat lines break at the last space before the
+    # limit, or get sawn in half when one word fills it.
+    # color state rides the newlines free cause render()
+    # never resets at line breaks.
     def self.wrap(src, site)
       max = site.config['xterm_max_width'].to_i
       return src if max <= 0
@@ -100,17 +100,17 @@ module Jekyll
       out
     end
 
-    # slug -> piece doc, memoized per site object. a linear
-    # docs.find per render turns quadratic around a thousand.
+    # slug -> piece doc, memoized per site. a linear find
+    # per render goes quadratic past a thousand, i checked.
     def self.doc_for(site, slug)
       @docmap ||= {}
       docs = (@docmap[site.object_id] ||= site.collections['pieces']&.docs&.to_h { |d| [d.data['slug'], d] })
       docs&.[](slug)
     end
 
-    # width bucket for font scaling: s fits at 14px anywhere,
-    # m steps down a point, l (the 80col ceiling zone) two.
-    # plus overflow-x: clip, no scrollbar can ever appear.
+    # font size buckets. s fits 14px anywhere, m drops a
+    # point, l (the 80col zone) drops two. overflow-x clips
+    # so a scrollbar can never show.
     def self.wclass(src)
       w = widths(src).max
       w <= 66 ? 'w-s' : w <= 78 ? 'w-m' : 'w-l'
@@ -194,11 +194,11 @@ module Jekyll
       XtermArt.check(src, "art/#{name}", site)
       src = XtermArt.wrap(src, site)
       body = XtermArt.render(src)
-      # pieces carry their museum label everywhere they appear
-      # an announce as an image, not two thousand chars of span
-      # soup. figure wraps pre+caption so flex rows cant split
-      # them. art with no doc (banner etc) stays chrome, an
-      # decorative chrome hides from screen readers entirely.
+      # pieces carry the museum label everywhere an announce
+      # as an image, not two thousand chars of span soup.
+      # figure wraps pre+caption so flex cant split them. art
+      # with no doc stays chrome, an chrome hides from screen
+      # readers entirely.
       doc = XtermArt.doc_for(site, File.basename(name, '.txt'))
       unless doc
         return %(<pre class="xterm #{XtermArt.wclass(src)}" aria-hidden="true">#{body}</pre>)

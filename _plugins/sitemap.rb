@@ -1,7 +1,7 @@
-# {% sitemap %} draws _data/map.yml as a colored ascii tree.
-# urls resolve to real anchors, an the map self-polices:
-# a node naming a missing page warns, an any page absent
-# from the map warns too. it cannot quietly drift.
+# {% sitemap %} draws _data/map.yml as a colored tree.
+# urls become anchors an the map tattles on itself: a node
+# naming a missing page warns, a page missing from the map
+# warns too. no quiet drift on my watch.
 module Jekyll
   class SitemapTag < Liquid::Tag
     def render(context)

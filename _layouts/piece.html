@@ -4,8 +4,8 @@ layout: default
 <article class="piece-page">
 {{ content }}
 </article>
-{% comment %} the ribbon: collection order is the walk order,
-    same as the daily tour. a piece page is a corridor {% endcomment %}
+{% comment %} the ribbon: collection order is the walk
+    order. a piece page is a corridor u walk {% endcomment %}
 {% assign cur = 0 %}
 {% for p in site.pieces %}
   {% if p.slug == page.slug %}{% assign cur = forloop.index0 %}{% endif %}
@@ -16,8 +16,8 @@ layout: default
   {% if pi >= 0 %}<a href="{{ site.pieces[pi].url | relative_url }}"><- {{ site.pieces[pi].title }}</a>{% else %}<span></span>{% endif %}
   {% if ni < site.pieces.size %}<a href="{{ site.pieces[ni].url | relative_url }}">{{ site.pieces[ni].title }} -></a>{% endif %}
 </nav>
-{% comment %} the lattice: hand views declare pieces: in front
-    matter, era walls match on era. where a piece hangs {% endcomment %}
+{% comment %} the lattice: views say pieces: in front
+    matter, era walls match on era. it picks the walls {% endcomment %}
 {% assign links = "" %}
 {% assign sep = "" %}
 {% for v in site.pages %}

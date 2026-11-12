@@ -1,8 +1,8 @@
 require 'open3'
 
-# whats-new comes from the commit subjects. the history is
-# already written in the sites voice, so the log is the news.
-# no git, no news, no problem: the list just renders empty.
+# whats-new reads commit subjects. the history is in my
+# voice so the log IS the news. no git no news, renders
+# empty an nobody dies.
 module Jekyll
   class News < Generator
     safe true

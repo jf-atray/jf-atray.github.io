@@ -2,11 +2,11 @@ require 'net/http'
 require 'json'
 require 'uri'
 
-# the guestbook wall lives on bluesky. replies to the post in
-# site.guestbook_post are the signatures, rendered at build the
-# same way the news feed reads git log. on a failed fetch the
-# last good wall stands in: _data/guestbook.json is our own
-# cache, loaded by jekyll before we run.
+# the wall lives on bluesky. replies to the guestbook_post
+# in config are the signatures, pulled at build same as the
+# news reads git log. fetch eats it sometimes, then the
+# last good wall stands: _data/guestbook.json is my cache,
+# jekyll loads it before i get here.
 module Jekyll
   class Guestbook < Generator
     safe true
