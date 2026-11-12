@@ -5,10 +5,11 @@ permalink: /pieces.html
 
 {% include views.html dir="/pieces/" index="/pieces.html" %}
 
-<p>ascii art written in a muds own color language: ampersand codes for
-xterm palette, truecolor an named colors, carets for background. every
-piece is real text, selectable, rendered exactly as it was written.
-{{ site.pieces | size }} pieces live here, all at one level.</p>
+<p>ascii art written in the color language of a mud i play: ampersand
+codes for xterm palette, truecolor an named colors, carets for
+background. every piece is real text, selectable, rendered exactly as
+it was written. {{ site.pieces | size }} pieces live here, all at one
+level.</p>
 
 <section class="exhibit">
   {% xterm_file droid.txt cap:left %}
