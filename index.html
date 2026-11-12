@@ -6,6 +6,8 @@ feature: tuco_shop
 <p>oh hi. watch ur step, theres colored text all over the floor.</p>
 
 {% xterm_file page.feature %}
+{% assign feat = site.pieces | where: "slug", page.feature | first %}
+{% include comments.html comments=feat.comments %}
 
 <h2>whats new</h2>
 <ul class="news">
