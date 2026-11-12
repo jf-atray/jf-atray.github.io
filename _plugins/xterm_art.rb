@@ -53,9 +53,9 @@ module Jekyll
       bad = widths(src).each_with_index.select { |w, _| w > max }
       return if bad.empty?
       bad.each do |w, i|
-        Jekyll.logger.warn 'xterm:', "#{label}:#{i + 1} is #{w} cols (limit #{max})"
+        Jekyll.logger.warn 'xterm:', "#{label}:#{i + 1} is #{w} fat cols (limit #{max})"
       end
-      raise "#{label} exceeds xterm_max_width on #{bad.size} lines" if site.config['xterm_max_strict']
+      raise "nope: #{label} too wide" if site.config['xterm_max_strict']
     end
 
     # autowrap: over long lines break at the last space before
@@ -188,8 +188,7 @@ module Jekyll
       name = name.sub(/\.(md|txt)\z/, '') + '.txt'
       path = File.join(site.source, 'art', File.basename(name))
       unless File.exist?(path)
-        page = context.registers[:page]['url'] rescue 'a page'
-        raise "xterm_file: art/#{name} not found (called from #{page})"
+        raise "xterm_file: no art/#{name}"
       end
       src = File.read(path)
       XtermArt.check(src, "art/#{name}", site)

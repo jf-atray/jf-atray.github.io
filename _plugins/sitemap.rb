@@ -27,7 +27,7 @@ module Jekyll
         last = i == nodes.size - 1
         url = n['url'].to_s
         if url.start_with?('/')
-          Jekyll.logger.warn 'sitemap:', "#{url} has no page" unless pages.include?(norm(url))
+          Jekyll.logger.warn 'sitemap:', "#{url} got no page" unless pages.include?(norm(url))
           mapped[norm(url)] = true
         end
         kids = n['children']
@@ -48,7 +48,7 @@ module Jekyll
       skip = %w[/404.html /map.html]
       (pages - mapped.keys - skip)
         .reject { |u| u.start_with?('/art/', '/assets/', '/feed') }
-        .each { |u| Jekyll.logger.warn 'sitemap:', "#{u} is not on the map" }
+        .each { |u| Jekyll.logger.warn 'sitemap:', "#{u} aint on the map" }
     end
 
     def draw(lines, site)

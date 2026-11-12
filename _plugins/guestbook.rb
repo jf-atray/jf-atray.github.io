@@ -16,7 +16,7 @@ module Jekyll
       url = site.config['guestbook_post']
       return unless url
       m = url.match(%r{bsky\.app/profile/([^/]+)/post/([^/?]+)})
-      return Jekyll.logger.warn('guestbook:', "cant parse post url #{url}") unless m
+      return Jekyll.logger.warn('guestbook:', "wut url: #{url}") unless m
       handle, rkey = m.captures
       api = URI("https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread" \
         "?uri=at://#{handle}/app.bsky.feed.post/#{rkey}&depth=1")
@@ -43,7 +43,7 @@ module Jekyll
         body = JSON.pretty_generate(site.data['guestbook'])
         File.write(cache, body) unless File.exist?(cache) && File.read(cache) == body
       rescue => e
-        Jekyll.logger.warn 'guestbook:', "fetch failed (#{e.message}), serving the cache"
+        Jekyll.logger.warn 'guestbook:', "fetch broke: #{e.message}"
       end
     end
   end
