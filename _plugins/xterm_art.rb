@@ -220,7 +220,7 @@ module Jekyll
       cap = parts.join('. ')
       cap += '. ' unless cap.empty?
       cls = %w[left right].include?(@cap) ? %(xterm-fig cap-#{@cap[0]}) : 'xterm-fig'
-      %(<figure class="#{cls}">#{pre}<figcaption class="cap">#{cap}<a href="#{site.baseurl}/art/#{name}">source</a></figcaption></figure>)
+      %(<figure class="#{cls}">#{pre}<figcaption class="cap">#{cap}<a href="#{site.baseurl}/art/#{name}" target="_blank" rel="noopener">source</a></figcaption></figure>)
     end
   end
 end
