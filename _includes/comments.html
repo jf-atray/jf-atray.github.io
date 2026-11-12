@@ -2,7 +2,7 @@
 <details class="comments"{% if include.open %} open{% endif %}>
 <summary>comments</summary>
 {% for c in include.comments %}
-<p class="comment"><span class="who">{{ c.who }}</span> "{{ c.text }}"</p>
+<p class="comment"><span class="who">{{ c.who }}</span><span class="said">"{{ c.text }}"</span></p>
 {% endfor %}
 </details>
 {% endif %}

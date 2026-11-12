@@ -226,7 +226,9 @@ section.exhibit ~ section.exhibit {
 /* museum comments. folded under the piece, open if u care */
 details.comments { margin-top: 2.5ch; font-size: 14px; color: var(--dim); }
 details.comments summary { cursor: pointer; color: var(--dimmer); }
-details.comments .who { color: var(--amber-dim); margin-right: 1ch; }
+details.comments .comment { display: table-row; }
+details.comments .who, details.comments .said { display: table-cell; padding-bottom: .4ch; }
+details.comments .who { color: var(--amber-dim); padding-right: 1ch; white-space: nowrap; }
 /* piece pages ride caps left by default, graduated from l4 */
 body.caps-l .xterm-fig figcaption {
   position: absolute; right: 100%; top: 0;
