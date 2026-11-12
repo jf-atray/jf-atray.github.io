@@ -1,5 +1,6 @@
 title: xterm_view
 description: ascii art an blog
+url: https://www.jonf.blog
 markdown: kramdown
 
 collections:
