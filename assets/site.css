@@ -37,15 +37,15 @@ body {
   /* the page is three tracks: gutter, content, gutter. the frs
      share leftover 2:1 so the rail side stays the thinner blank,
      an collapse to nothing on narrow windows. the content track
-     holds the full footprint: 100ch col + 4ch gap + 31ch rail */
+     holds the full footprint: 63ch col + 24ch gap + 31ch rail */
   display: grid;
-  grid-template-columns: 2fr minmax(0, 135ch) 1fr;
+  grid-template-columns: 2fr minmax(0, 118ch) 1fr;
   padding: 2ch;
 }
 body > * { grid-column: 2; }
 
 /* prose column plus a furniture rail */
-main { display: flex; flex-wrap: wrap; gap: 4ch; align-items: flex-start; }
+main { display: flex; flex-wrap: wrap; gap: 24ch; align-items: flex-start; }
 .col { flex: 1; min-width: min(45ch, 100%); }
 .rail {
   width: 28ch;
@@ -75,6 +75,14 @@ main { display: flex; flex-wrap: wrap; gap: 4ch; align-items: flex-start; }
 .ribbon { display: flex; justify-content: space-between; margin-top: 3ch;
           font-size: 14px; }
 .inviews { font-size: 14px; color: var(--dim); }
+
+/* breaking the measure: wide content may borrow 18ch of the moat,
+   leaving 6 before the rails border. kin to the margin captions.
+   only while the rail actually holds its seat — under the stack
+   breakpoint the bleed would escape into the right gutter */
+@media (min-width: 901px) {
+  .bleed { margin-right: -18ch; }
+}
 
 /* stacked narrow: the rail lands below content an swaps its
    side border for a top one */
@@ -194,7 +202,7 @@ body.caps-l .xterm-fig figcaption {
   position: absolute; right: 100%; top: 0;
   width: 16ch; margin: 0 3ch 0 0;
 }
-@media (max-width: 175ch) {
+@media (max-width: 150ch) {
   .xterm-fig.cap-l figcaption, .xterm-fig.cap-r figcaption,
   body.caps-l .xterm-fig figcaption {
     position: static; width: auto; margin: 1ch 0 0; text-align: right;
