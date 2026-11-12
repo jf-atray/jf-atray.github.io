@@ -40,6 +40,9 @@
     - name: site
       url: /about/site.html
       note: the colophon
+- name: recipes
+  url: /recipes.html
+  note: whats for dinner
 - name: the rail
   note: furniture on every page
   children:

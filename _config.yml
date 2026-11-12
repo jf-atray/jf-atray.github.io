@@ -20,6 +20,9 @@ collections:
   pieces:
     output: true
     permalink: /pieces/:name/
+  recipes:
+    output: true
+    permalink: /recipes/:name/
 
 defaults:
   # the belt: nothing renders without a layout, ever. broad
@@ -40,6 +43,10 @@ defaults:
       layout: post
       parent: /posts.html
       permalink: /posts/:slug/
+  - scope:
+      type: recipes
+    values:
+      parent: /recipes.html
 
 exclude:
   - notes/
