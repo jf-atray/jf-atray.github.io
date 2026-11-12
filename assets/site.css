@@ -279,14 +279,16 @@ footer {
 .gb-wall .gb:nth-child(even) { flex-direction: row-reverse; transform: translateY(3ch); }
 .gb-wall .gb:nth-child(even) .gb-top { text-align: right; }
 .gb-wall .gb:nth-child(even) .gb-d { float: left; margin-left: var(--gb-gap); }
-.gb-wall .gb:nth-child(even) .gb-t { width: fit-content; max-width: 100%; margin-left: auto; }
+.gb-wall .gb:nth-child(even) .gb-b { display: flex; flex-direction: column; }
+.gb-wall .gb:nth-child(even) .gb-t { align-self: flex-end; max-width: 100%; }
 @media (max-width: 700px) {
   .gb-wall { grid-template-columns: 1fr; }
   .gb-wall .gb .gb-d { margin: 0; }
   .gb-wall .gb:nth-child(even) { flex-direction: row; transform: none; }
   .gb-wall .gb:nth-child(even) .gb-top { text-align: left; }
+  .gb-wall .gb:nth-child(even) .gb-b { display: block; }
   .gb-wall .gb:nth-child(even) .gb-d { float: right; }
-  .gb-wall .gb:nth-child(even) .gb-t { width: auto; margin-left: 0; }
+  .gb-wall .gb:nth-child(even) .gb-t { align-self: stretch; }
 }
 .btn88 {
   display: inline-block;
