@@ -89,6 +89,8 @@ main { display: flex; flex-wrap: wrap; gap: 24ch; align-items: flex-start; }
 @media (max-width: 900px) {
   .rail { width: 100%; border-left: 0; border-top: var(--hairline);
           padding-left: 0; padding-top: 2ch; }
+  /* no rail line to be flush with when the rail stacks */
+  header pre.xterm { margin-right: 0; }
 }
 
 /* the banners field continues down the page edges on wide
@@ -125,13 +127,24 @@ h3 { font-size: 1em; }
 
 hr { border: 0; border-top: var(--hairline); margin: 4ch 0; }
 
-header pre.xterm { margin: 0; }
+/* the warm line is the headers bottom edge: nav up top, banner
+   art hanging right with its feet on the line */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1ch 3ch;
+  border-bottom: var(--hairline-warm); /* the one colored line */
+  margin-bottom: 3ch;
+}
+/* the art stands with its feet on the line an its right edge
+   flush against the rails left border — margin-right is the
+   rails own width so it tracks at any window size */
+header pre.xterm { margin: 0 calc(31ch + 1px) 0 auto; }
 
 nav {
-  margin: 1ch 0 3ch;
-  padding-bottom: 1.2ch;
+  margin: 1ch 0 0;
   color: var(--dimmer);
-  border-bottom: var(--hairline-warm); /* the one colored line */
 }
 nav a { text-decoration: none; }
 nav a:hover { text-decoration: underline; }

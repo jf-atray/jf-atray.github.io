@@ -111,7 +111,6 @@
 &240    .
 {% endxterm %}</div>
 <header>
-  {% xterm_file banner.txt %}
   <nav>
     <a href="{{ '/' | relative_url }}">home</a> .
     <a href="{{ '/pieces.html' | relative_url }}">pieces</a> .
@@ -119,6 +118,7 @@
     <a href="{{ '/projects/' | relative_url }}">projects</a> .
     <a href="{{ '/about/' | relative_url }}">about</a>
   </nav>
+  {% xterm_file banner.txt %}
 </header>
 
 <main>
