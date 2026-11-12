@@ -5,7 +5,7 @@ permalink: /pieces.html
 
 {% include views.html dir="/pieces/" index="/pieces.html" %}
 
-<p>ascii art in the color language of a mud he plays. real text,
+<p>ascii art in the color language of a mud the webmaster plays. real text,
 u can select it an everything. {{ site.pieces | size }} pieces,
 all on one level.</p>
 

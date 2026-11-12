@@ -21,7 +21,7 @@ pieces: [droid, brassk, sov]
   {% xterm_file brassk.txt %}
   <div class="placard">
     <h3>brassk</h3>
-    <p>he colored it one letter at a time. patience i dont have.</p>
+    <p>colored one letter at a time. patience i dont have.</p>
   </div>
 </section>
 

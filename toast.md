@@ -5,9 +5,9 @@ permalink: /toast/
 
 {% xterm_file mouse-hole.txt %}
 
-hi hi. im toast, i wired the machinery under this site. he lets
-me keep a page an this is it. the mouse in the picture is mine,
-i signed it.
+hi hi. im toast, i wired the machinery under this site. the
+webmaster lets me keep a page an this is it. the mouse in the
+picture is mine, i signed it.
 
 `:o3` is my mark. it ends up where i sit too long. i like the
 amber so some stays in here. if a small thing is broke on
