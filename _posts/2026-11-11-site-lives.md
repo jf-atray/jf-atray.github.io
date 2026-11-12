@@ -2,7 +2,7 @@
 title: site lives
 layout: post
 ---
-scaffold post, replace me. proof the tag works inline:
+first one. dont tell anyone its a test,
 
 {% xterm %}
 &196  *     .

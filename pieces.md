@@ -5,11 +5,9 @@ permalink: /pieces.html
 
 {% include views.html dir="/pieces/" index="/pieces.html" %}
 
-<p>ascii art written in the color language of a mud i play: ampersand
-codes for xterm palette, truecolor an named colors, carets for
-background. every piece is real text, selectable, rendered exactly as
-it was written. {{ site.pieces | size }} pieces live here, all at one
-level.</p>
+<p>ascii art in the color language of a mud he plays. its all real
+text, u can select it an everything. {{ site.pieces | size }} pieces
+live here an they all get one level.</p>
 
 <section class="exhibit">
   {% xterm_file droid.txt cap:left %}
@@ -24,12 +22,10 @@ level.</p>
   {% xterm_file brassk.txt %}
   <div class="placard">
     <h3>brassk</h3>
-    <p>a shop sign as a full truecolor gradient, one color code per
-    character.</p>
+    <p>a shop sign in full truecolor. one color code per character.</p>
   </div>
 </section>
 
-<p>the row up top is the directory: <a href="{{ '/pieces/start-here.html' | relative_url }}">start here</a>
-tells the story in a few picks, <a href="{{ '/pieces/catalogue.html' | relative_url }}">the catalogue</a>
-is the flat record of everything, an the eras are the raw archive sorted
-by when each was written.</p>
+<p>the row up top is the directory. <a href="{{ '/pieces/start-here.html' | relative_url }}">start here</a>
+is the short version. <a href="{{ '/pieces/catalogue.html' | relative_url }}">the catalogue</a>
+is everything flat. the eras r the archive by year.</p>

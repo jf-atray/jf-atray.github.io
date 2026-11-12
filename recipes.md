@@ -9,5 +9,5 @@ permalink: /recipes.html
 {% endfor %}
 </ul>
 {% else %}
-<p>the pantry is empty. the first dish goes in <code>_recipes/</code> with a <code>title:</code> an whatever structure the writing wants.</p>
+<p>no food yet. first dish goes in <code>_recipes/</code> w a <code>title:</code> on top an watever else it wants.</p>
 {% endif %}

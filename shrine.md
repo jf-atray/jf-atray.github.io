@@ -3,4 +3,4 @@ title: shrine
 permalink: /shrine.html
 ---
 
-<p>a whole page devoted to one thing u love, the way the old web taught us. pick ur subject.</p>
+<p>a whole page for one thing u love. old web rules. pick ur subject, i believe in u.</p>

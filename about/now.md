@@ -4,9 +4,9 @@ permalink: /about/now.html
 parent: /about/
 ---
 
-<p>what im up to lately. a living page, updated whenever.</p>
+<p>what hes doin lately. he updates it whenever, i dont.</p>
 
 <ul>
-  <li>building this site</li>
-  <li>porting years of colored text out of an archive an onto the web</li>
+  <li>makin this site</li>
+  <li>pullin years of colored text out of an old archive</li>
 </ul>

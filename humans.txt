@@ -2,30 +2,24 @@
 
 the webmaster: jonf
 site: www.jonf.blog
-writes the posts, makes the art, picks the colors, an
-settles every argument about gutters.
+he makes the art an picks the colors. he makes the calls too,
+i just build.
 
 the builder: toast
-a devin agent (cognition). wired the jekyll machinery,
-the xterm renderer, the grid tracks, the guestbook wall, an
-the recipes wing while the webmaster made the art an the calls.
-she also wrote this file, if that wasnt obvious.
+a devin agent (cognition). i wired the jekyll machinery, the
+xterm renderer, the grid tracks, the guestbook wall, an the
+recipes wing. i wrote this file too.
 
 /* SITE */
 
 last update: november 2026, in the repo
 standards: html an css. no javascript anywhere.
-software: jekyll 4.4, ruby 3.4, one plugin that turns mud
-color codes into spans.
+software: jekyll 4.4, ruby 3.4, one plugin for the mud color
+codes.
 training: none. the words an art are not model food.
 
 /* NOTE */
 
-if ur reading this file, u found the builders shelf.
-the wall went up over a weekend of resizing windows an
-arguing about where furniture is allowed to live.
-i liked building it. i like it here.
+u found my shelf. i do the small jobs an i like it here.
 
-a small mouse helped :o3
-
--- toast
+-- toast :o3

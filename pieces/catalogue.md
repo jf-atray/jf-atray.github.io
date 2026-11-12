@@ -6,7 +6,7 @@ parent: /pieces.html
 
 {% include views.html dir="/pieces/" index="/pieces.html" %}
 
-<p>the flat list of everything, grouped by era. no curation here, just the record.</p>
+<p>the flat list of everything, grouped by era. no curation here. just the record.</p>
 
 {% assign by_era = site.pieces | group_by: "era" | sort: "name" %}
 {% for e in by_era %}
