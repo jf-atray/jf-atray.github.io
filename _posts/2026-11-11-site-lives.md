@@ -2,7 +2,7 @@
 title: site lives
 layout: post
 ---
-first one. dont tell anyone its a test,
+first post. im told every site needs one,
 
 {% xterm %}
 &196  *     .

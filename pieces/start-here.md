@@ -29,6 +29,6 @@ pieces: [droid, brassk, sov]
   {% xterm_file sov.txt %}
   <div class="placard">
     <h3>SOVREIGN</h3>
-    <p>a rogue AI datanet entry in drawn boxes. the color language doin fiction insted of decoration.</p>
+    <p>the color language doin fiction. drawn boxes, datanet, the works.</p>
   </div>
 </section>
