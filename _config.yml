@@ -39,6 +39,7 @@ defaults:
     values:
       layout: post
       parent: /posts.html
+      permalink: /posts/:slug/
 
 exclude:
   - notes/
