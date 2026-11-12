@@ -34,9 +34,6 @@
   url: /about/
   note: who
   children:
-    - name: now
-      url: /about/now.html
-      note: the living page
     - name: site
       url: /about/site.html
       note: the colophon

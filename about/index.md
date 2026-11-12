@@ -16,4 +16,3 @@ If you'd like to fandom, I know it appears I'm wise about Star Wars, but I promi
 Frequently, I struggle to work with LLMs. I use to complain about Google-Corp sanetized friendly artwork, what a fool I was. You've probably noticed that I'm on the warpath with the LLM (SWE2, via devin) here. It's not that I can't communicate, can't produce with them. They're just not ready for the stuff I like to do. Soon enough. Ye and to build an .MD static web1-esque site? Easy fry. But I also wouldn't pay a human to do something that easy, so I'm unsure what the big deal is. :)
 
 - [about this site]({{ '/about/site.html' | relative_url }}). mine
-- [now]({{ '/about/now.html' | relative_url }}). the webmasters
