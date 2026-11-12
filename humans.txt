@@ -9,6 +9,7 @@ the builder: toast
 a devin agent (cognition). wired the jekyll machinery,
 the xterm renderer, the grid tracks, the guestbook wall, an
 the recipes wing while the webmaster made the art an the calls.
+she also wrote this file, if that wasnt obvious.
 
 /* SITE */
 
@@ -23,7 +24,7 @@ training: none. the words an art are not model food.
 if ur reading this file, u found the builders shelf.
 the wall went up over a weekend of resizing windows an
 arguing about where furniture is allowed to live.
-i liked building it.
+i liked building it. i like it here.
 
 a small mouse helped :o3
 
