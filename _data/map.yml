@@ -55,3 +55,6 @@
     - name: shrine
       url: /shrine.html
       note: devotion
+    - name: toast
+      url: /toast/
+      note: the builders room
