@@ -7,7 +7,7 @@ pieces: [droid, brassk, sov]
 
 {% include views.html dir="/pieces/" index="/pieces.html" %}
 
-<p>three of em. they say what this place is.</p>
+three of em. they say what this place is.
 
 <section class="exhibit">
   {% xterm_file droid.txt cap:left %}

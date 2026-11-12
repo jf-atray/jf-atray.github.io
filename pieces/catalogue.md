@@ -6,14 +6,12 @@ parent: /pieces.html
 
 {% include views.html dir="/pieces/" index="/pieces.html" %}
 
-<p>all of it, by era.</p>
+all of it, by era.
 
 {% assign by_era = site.pieces | group_by: "era" | sort: "name" %}
 {% for e in by_era %}
-<h2>era {{ e.name | default: "uncatalogued" }}</h2>
-<ul>
+## era {{ e.name | default: "uncatalogued" }}
 {% for p in e.items %}
-  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+- [{{ p.title }}]({{ p.url | relative_url }})
 {% endfor %}
-</ul>
 {% endfor %}

@@ -3,9 +3,9 @@ title: guestbook
 permalink: /guestbook.html
 ---
 
-<p>the wall is a bluesky post. <a href="{{ site.guestbook_post }}">reply to it</a> an ur name shows up here next build. freshest i can do.</p>
+the wall is a bluesky post. [reply to it]({{ site.guestbook_post }}) an ur name shows up here next build. freshest i can do.
 
-<h2>the wall</h2>
+## the wall
 {% if site.data.guestbook.size > 0 %}
 <div class="gb-wall bleed">
 {% for e in site.data.guestbook %}

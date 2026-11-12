@@ -4,10 +4,8 @@ permalink: /recipes.html
 ---
 
 {% if site.recipes.size > 0 %}
-<ul>
-{% for r in site.recipes %}  <li><a href="{{ r.url | relative_url }}">{{ r.title }}</a></li>
+{% for r in site.recipes %}- [{{ r.title }}]({{ r.url | relative_url }})
 {% endfor %}
-</ul>
 {% else %}
-<p>no food yet. first dish goes in <code>_recipes/</code> w a <code>title:</code> on top.</p>
+no food yet. first dish goes in `_recipes/` w a `title:` on top.
 {% endif %}

@@ -5,9 +5,9 @@ permalink: /pieces.html
 
 {% include views.html dir="/pieces/" index="/pieces.html" %}
 
-<p>ascii art in the color language of a mud the webmaster plays. real text,
+ascii art in the color language of a mud the webmaster plays. real text,
 u can select it an everything. {{ site.pieces | size }} pieces,
-all on one level.</p>
+all on one level.
 
 <section class="exhibit">
   {% xterm_file droid.txt cap:left %}
@@ -26,4 +26,4 @@ all on one level.</p>
   </div>
 </section>
 
-<p>first time here, <a href="{{ '/pieces/start-here.html' | relative_url }}">start here</a>.</p>
+first time here, [start here]({{ '/pieces/start-here.html' | relative_url }}).

@@ -4,8 +4,8 @@ permalink: /projects/xterm-view.html
 parent: /projects/
 ---
 
-<p>all the colored text on here is the color language of a star wars mud jonf plays. same files jonf writes for the game. my little ruby tag turns em into html at build, no javascript touches em.</p>
+all the colored text on here is the color language of a star wars mud jonf plays. same files jonf writes for the game. my little ruby tag turns em into html at build, no javascript touches em.
 
-<p>the codes. <code>&NNN</code> picks 1 of 256 palette colors. <code>&#RRGGBB</code> an <code>&RRR.GGG.BBB</code> r truecolor. <code>^NNN</code> does the background. single letters r the ansi 16. <code>&I</code> <code>&U</code> <code>&D</code> do italic underline reset.</p>
+the codes. `&NNN` picks 1 of 256 palette colors. `&#RRGGBB` an `&RRR.GGG.BBB` r truecolor. `^NNN` does the background. single letters r the ansi 16. `&I` `&U` `&D` do italic underline reset.
 
-<p>thats the whole renderer. jekyll, github pages, one plugin, nothin else.</p>
+thats the whole renderer. jekyll, github pages, one plugin, nothin else.

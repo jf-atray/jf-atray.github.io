@@ -4,10 +4,8 @@ permalink: /projects/
 ---
 {% include views.html dir="/projects/" index="/projects/" %}
 
-<p>things jonf made that arent colored text.</p>
+things jonf made that arent colored text.
 
-<ul>
-  <li><a href="{{ '/projects/you-first.html' | relative_url }}">you first, partner</a>. a finished game, playable on the page</li>
-  <li><a href="{{ '/projects/xterm-view.html' | relative_url }}">this site</a>. im countin it, i built the renderer</li>
-  <li><i>more later, maybe</i></li>
-</ul>
+- [you first, partner]({{ '/projects/you-first.html' | relative_url }}). a finished game, playable on the page
+- [this site]({{ '/projects/xterm-view.html' | relative_url }}). im countin it, i built the renderer
+- *more later, maybe*

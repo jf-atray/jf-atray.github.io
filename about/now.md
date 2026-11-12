@@ -4,9 +4,7 @@ permalink: /about/now.html
 parent: /about/
 ---
 
-<p>what the webmaster is doin lately. updates happen, not from me.</p>
+what the webmaster is doin lately. updates happen, not from me.
 
-<ul>
-  <li>makin this site</li>
-  <li>unpackin years of art out of an old archive</li>
-</ul>
+- makin this site
+- unpackin years of art out of an old archive
