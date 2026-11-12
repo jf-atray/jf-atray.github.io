@@ -3,7 +3,7 @@ title: guestbook
 permalink: /guestbook.html
 ---
 
-<p>the sacred tradition. the wall lives on bluesky: <a href="{{ site.guestbook_post }}">reply to the post</a> to sign it, or <a href="mailto:guestbook@example.com?subject=signing%20the%20guestbook">email</a> like its 1998. signatures render at build time, so the wall is only as fresh as the last deploy.</p>
+<p>the sacred tradition. the wall lives on bluesky: <a href="{{ site.guestbook_post }}">reply to the post</a> to sign it. signatures render at build time, so the wall is only as fresh as the last deploy.</p>
 
 <h2>the wall</h2>
 {% if site.data.guestbook.size > 0 %}
