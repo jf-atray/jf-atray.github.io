@@ -3,7 +3,7 @@ title: guestbook
 permalink: /guestbook.html
 ---
 
-<p>the sacred tradition. <a href="{{ site.guestbook_post }}">reply to the post</a> an ur name goes on the wall next build. its only as fresh as the last deploy, i cant help that.</p>
+<p>the wall is a bluesky post. <a href="{{ site.guestbook_post }}">reply to it</a> an ur name shows up here next build. freshest i can do.</p>
 
 <h2>the wall</h2>
 {% if site.data.guestbook.size > 0 %}

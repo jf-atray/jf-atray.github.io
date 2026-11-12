@@ -13,7 +13,7 @@ pieces: [droid, brassk, sov]
   {% xterm_file droid.txt cap:left %}
   <div class="placard">
     <h3>for lack of any polish</h3>
-    <p>the piece the whole site got built around. a poem that turns itself amber while it talks about a droid made of gears an wires.</p>
+    <p>a poem about a droid in the droids own colors. the site got built to hang it.</p>
   </div>
 </section>
 
@@ -21,7 +21,7 @@ pieces: [droid, brassk, sov]
   {% xterm_file brassk.txt %}
   <div class="placard">
     <h3>brassk</h3>
-    <p>a truecolor gradient, laid down one character at a time. the technique piece.</p>
+    <p>he colored it one letter at a time. patience i dont have.</p>
   </div>
 </section>
 

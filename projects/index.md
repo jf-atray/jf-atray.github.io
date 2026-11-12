@@ -4,7 +4,7 @@ permalink: /projects/
 ---
 {% include views.html dir="/projects/" index="/projects/" %}
 
-<p>things he made that arent colored text. its a short list.</p>
+<p>things he made that arent colored text.</p>
 
 <ul>
   <li><a href="{{ '/projects/you-first.html' | relative_url }}">you first, partner</a>. a finished game, playable right here</li>
