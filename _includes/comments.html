@@ -1,5 +1,5 @@
 {% if include.comments %}
-<details class="comments">
+<details class="comments"{% if include.open %} open{% endif %}>
 <summary>comments</summary>
 {% for c in include.comments %}
 <p class="comment"><span class="who">{{ c.who }}</span> {{ c.text }}</p>

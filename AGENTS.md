@@ -54,7 +54,8 @@ build. set `xterm_max_strict: true` to make em fail instead.
   the gallery. view pages list slugs, the piece names nothing.
   `comments:` (list of `who:` + `text:`) puts a folded
   museum-comments block under the piece on its own page.
-  walls an catalogue dont show em.
+  `comments_open: true` opens it by default. walls an
+  catalogue dont show em, the front door feature does.
 - an era wall: `pieces/era-X.md` w `layout: era` an `era: X`.
   it lists its own pieces, needs no body.
 - a recipe: `_recipes/slug.md` w `title:`. the pantry page
