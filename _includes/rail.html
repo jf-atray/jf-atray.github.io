@@ -2,6 +2,13 @@
 {% assign potd_i = site.time | date: "%s" | divided_by: 86400 | floor | modulo: site.pieces.size %}
 {% assign potd = site.pieces[potd_i] %}
 <h3>me</h3>
+{% xterm %}
+&240   .---.
+&240  | o o |
+&136  |  ~  |
+&240   '---'
+{% endxterm %}
+<p>the webmaster. <a href="https://bsky.app/profile/jonf.blog" target="_blank" rel="noopener">@jonf.blog</a></p>
 <p><a href="{{ '/about/' | relative_url }}">about</a> .
    <a href="{{ '/about/now.html' | relative_url }}">now</a> .
    <a href="{{ '/shrine.html' | relative_url }}">shrine</a> .
@@ -20,7 +27,7 @@
 <p class="kv"><span class="k">tonights pick</span><span class="v"><a href="{{ potd.url | relative_url }}">{{ potd.title }}</a></span></p>
 <p class="kv"><span class="k">latest post</span><span class="v"><a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></span></p>
 <h3>odds</h3>
-<p><- <a href="{{ '/links.html' | relative_url }}">the webring</a> -> . <a href="{{ '/map.html' | relative_url }}">site map</a></p>
-<p class="kv"><span class="k">visitors</span><span class="v"><img class="hitcounter" src="https://xbawx.com/counter/iwt59j5j7euu.gif" alt="visitor count" width="96" height="32"></span></p>
-<p class="kv"><span class="k">est.</span><span class="v">2026</span></p>
-<p><span class="btn88">xterm_view</span></p>
+<p><- <a href="{{ '/links.html' | relative_url }}">the webring</a> -></p>
+<p><a href="{{ '/map.html' | relative_url }}">the site map</a></p>
+<p><img class="hitcounter" src="https://xbawx.com/counter/iwt59j5j7euu.gif" alt="visitor count" width="96" height="32"></p>
+<p><span class="btn88">xterm_view</span> est. 2026</p>

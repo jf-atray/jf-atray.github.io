@@ -57,6 +57,7 @@ main { display: flex; flex-wrap: wrap; gap: 24ch; align-items: flex-start; }
 }
 .rail h3 { font-size: 14px; color: var(--faint); margin: 0 0 1ch; }
 .rail p { margin: 0 0 1.5ch; }
+.rail pre.xterm { font-size: 10px; margin: 0 0 1.5ch; }
 /* call an answer rows: the answer column shares one edge */
 .kv { display: flex; gap: 2ch; }
 .kv .k { flex: none; width: 13ch; }
