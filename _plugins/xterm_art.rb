@@ -165,7 +165,9 @@ module Jekyll
       site = context.registers[:site]
       XtermArt.check(src, "xterm block on #{page}", site)
       src = XtermArt.wrap(src, site)
-      %(<pre class="xterm #{XtermArt.wclass(src)}">#{XtermArt.render(src)}</pre>)
+      # inline blocks r chrome an doodles, never the art.
+      # real pieces come thru xterm_file an get a label.
+      %(<pre class="xterm #{XtermArt.wclass(src)}" aria-hidden="true">#{XtermArt.render(src)}</pre>)
     end
   end
 
