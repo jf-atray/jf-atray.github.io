@@ -2,6 +2,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title }}. {% endif %}{{ site.title }}</title>
+<link type="text/plain" rel="author" href="{{ '/humans.txt' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/palette.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
 
@@ -132,6 +133,6 @@
 </main>
 
 <footer>
-  <p>hand colored text . jekyll . best viewed in any browser</p>
+  <p>hand colored text . jekyll . best viewed in any browser . <a href="{{ '/humans.txt' | relative_url }}">humans</a></p>
 </footer>
 </body>

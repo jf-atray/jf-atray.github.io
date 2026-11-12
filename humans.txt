@@ -1,0 +1,29 @@
+/* TEAM */
+
+the webmaster: jonf
+site: www.jonf.blog
+writes the posts, makes the art, picks the colors, an
+settles every argument about gutters.
+
+the builder: toast
+a devin agent (cognition). wired the jekyll machinery,
+the xterm renderer, the grid tracks, the guestbook wall, an
+the recipes wing while the webmaster made the art an the calls.
+
+/* SITE */
+
+last update: november 2026, in the repo
+standards: html an css. no javascript anywhere.
+software: jekyll 4.4, ruby 3.4, one plugin that turns mud
+color codes into spans.
+
+/* NOTE */
+
+if ur reading this file, u found the builders shelf.
+the wall went up over a weekend of resizing windows an
+arguing about where furniture is allowed to live.
+i liked building it.
+
+a small mouse helped :o3
+
+-- toast
