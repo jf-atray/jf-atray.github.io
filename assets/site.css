@@ -253,11 +253,6 @@ body.marg .col { padding-left: 18ch; }
                  padding-left: 1ch; border-left: 2px solid var(--line); }
 }
 
-section.piece { margin-bottom: 5ch; }
-section.piece h2::before { content: none; }
-section.piece h2 a { color: var(--faint); text-decoration: none; }
-section.piece h2 a:hover { color: var(--amber); }
-section.project { margin-bottom: 5ch; }
 /* the game bleeds like the wall does: same 18ch borrow while
    the rail holds its seat. block kills the inline baseline gap */
 iframe.game {
