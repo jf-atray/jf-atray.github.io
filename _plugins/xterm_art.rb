@@ -222,7 +222,7 @@ module Jekyll
       # caption there only needs the datemark an the link.
       # parts join so nothing renders a leading separator
       parts = []
-      parts << %(<span class="cap-t">#{doc.data['title']}</span>) unless context.registers[:page]['layout'] == 'piece'
+      parts << %(<a class="cap-t" href="#{site.baseurl}#{doc.url}">#{doc.data['title']}</a>) unless context.registers[:page]['layout'] == 'piece'
       parts << mark if mark
       cap = parts.join('. ')
       cap += '. ' unless cap.empty?
