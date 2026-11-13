@@ -21,10 +21,6 @@ Jekyll::Hooks.register :site, :post_read do |site|
       end
     end
 
-    if pg.data['layout'] == 'era' && pg.data['era']
-      pcs.each { |d| put.call(d, pg) if d.data['era'] == pg.data['era'] }
-    end
-
     pg.content.to_s.scan(/\{%\s*xterm_file\s+["']?([^"'%}\s]+)/) do |(raw)|
       s = File.basename(raw).sub(/\.(md|txt)\z/, '')
       put.call(own[s], pg) if own.key?(s)

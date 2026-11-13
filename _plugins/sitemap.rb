@@ -31,17 +31,10 @@ module Jekyll
           mapped[norm(url)] = true
         end
         kids = n['children']
-        kids ||= era_children(site) if n['expand'] == 'era'
         lines << [n['name'].to_s, n['note'].to_s, prefix, last, url.empty? ? nil : url]
         walk(kids, prefix + (last ? '   ' : '│  '), lines, mapped, pages, site) if kids
         lines << [:branch, prefix] unless last
       end
-    end
-
-    def era_children(site)
-      site.pages.select { |p| p.url =~ %r{^/pieces/era-.+\.html$} }
-        .sort_by { |p| p.url }
-        .map { |p| { 'name' => p.data['title'], 'url' => p.url } }
     end
 
     def check_unmapped(pages, mapped, site)

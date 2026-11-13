@@ -1,6 +1,5 @@
 # the sites topology as data. _plugins/sitemap.rb draws it.
-# nodes: name, note, optional url, optional children,
-# optional expand: era (grows itself from real era pages).
+# nodes: name, note, optional url, optional children.
 - name: home
   url: /
   note: the front door
@@ -14,9 +13,6 @@
     - name: catalogue
       url: /pieces/catalogue.html
       note: the whole record
-    - name: era walls
-      note: the archive rooms
-      expand: era
 - name: posts
   url: /posts.html
   note: the words
