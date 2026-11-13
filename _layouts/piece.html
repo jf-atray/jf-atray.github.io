@@ -17,15 +17,6 @@ layout: default
   {% if pi >= 0 %}<a href="{{ site.pieces[pi].url | relative_url }}"><- {{ site.pieces[pi].title }}</a>{% else %}<span></span>{% endif %}
   {% if ni < site.pieces.size %}<a href="{{ site.pieces[ni].url | relative_url }}">{{ site.pieces[ni].title }} -></a>{% endif %}
 </nav>
-{% comment %} the lattice: views say pieces: in front
-    matter, era walls match on era. it picks the walls {% endcomment %}
-{% assign links = "" %}
-{% assign sep = "" %}
-{% for v in site.pages %}
-  {% if v.pieces contains page.slug or v.layout == "era" and v.era == page.era %}
-    {% capture l %}{{ sep }}<a href="{{ v.url | relative_url }}">{{ v.title }}</a>{% endcapture %}
-    {% assign links = links | append: l %}
-    {% assign sep = " . " %}
-  {% endif %}
-{% endfor %}
-{% if links != "" %}<p class="inviews">hangs in: {{ links }}</p>{% endif %}
+{% comment %} the lattice: hangs.rb already sniffed who
+    holds the piece an left em in page.hung_in {% endcomment %}
+{% if page.hung_in %}<p class="inviews">hangs in: {% for v in page.hung_in %}<a href="{{ v.url | relative_url }}">{{ v.title }}</a>{% unless forloop.last %} . {% endunless %}{% endfor %}</p>{% endif %}
