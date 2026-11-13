@@ -18,12 +18,4 @@ all on one level.
   </div>
 </section>
 
-<section class="exhibit flip">
-  {% xterm_file brassk.txt %}
-  <div class="placard">
-    <h3>brassk</h3>
-    <p>a shop sign that exists to show off the colors.</p>
-  </div>
-</section>
-
 first time here, [start here]({{ '/pieces/start-here.html' | relative_url }}).
