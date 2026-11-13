@@ -3,7 +3,10 @@ title: guestbook
 permalink: /guestbook.html
 ---
 
-the wall is a bluesky post. [reply to it]({{ site.guestbook_post }}) an ur name shows up here next build. freshest i can do.
+This is my interactive guest book. There are many like it, but this one is mine.
+
+
+[reply to it]({{ site.guestbook_post }})
 
 ## the wall
 {% if site.data.guestbook.size > 0 %}
@@ -13,5 +16,5 @@ the wall is a bluesky post. [reply to it]({{ site.guestbook_post }}) an ur name 
 {% endfor %}
 </div>
 {% else %}
-<p class="gb">the wall is quiet. be the first name on it.</p>
+<p class="gb">We wait for the bored first captain to brave a test.</p>
 {% endif %}
