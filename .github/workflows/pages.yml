@@ -3,9 +3,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -14,7 +16,29 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # cheap check: curl the bsky thread, count replies,
+  # compare to the committed cache. scheduled runs build
+  # only when the count changed. catches new sigs an
+  # deletes, misses edits an avatar swaps, nobody cares.
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.c.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: c
+        run: |
+          url=$(grep 'guestbook_post:' _config.yml | awk '{print $2}')
+          at=$(echo "$url" | sed -E 's#.*/profile/([^/]+)/post/([^/?]+).*#at://\1/app.bsky.feed.post/\2#')
+          json=$(curl -sf "https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri=$at&depth=1")
+          new=$(echo "$json" | jq --arg root "$(echo "$json" | jq -r '.thread.post.author.did')" \
+            '[.thread.replies[]? | select(.post.author.did != $root)
+              | select(.post.record.text | test("\\S"))] | length')
+          old=$(jq 'length' _data/guestbook.json)
+          echo "changed=$([ "$new" = "$old" ] && echo false || echo true)" >> "$GITHUB_OUTPUT"
   build:
+    needs: check
+    if: github.event_name != 'schedule' || needs.check.outputs.changed == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +52,15 @@ jobs:
         env:
           JEKYLL_ENV: production
       - uses: actions/upload-pages-artifact@v3
+      # commit the cache back or the check rebuilds forever.
+      # bot push fires one followup push-build, then the
+      # count matches an it stops.
+      - if: github.event_name == 'schedule'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/guestbook.json
+          git diff --cached --quiet || (git commit -m "guestbook cache updates" && git push)
   deploy:
     needs: build
     runs-on: ubuntu-latest
