@@ -11,6 +11,12 @@ Jekyll::Hooks.register :site, :post_read do |site|
   end
 
   (site.pages + site.documents).each do |pg|
+    up = pg.data['parent'].to_s.sub(%r{/\z}, '')
+    unless up.empty?
+      ok = site.pages.any? { |p| p.url.sub(%r{/\z}, '') == up }
+      Jekyll.logger.warn 'crumb:', "#{pg.relative_path} parent '#{up}' aint a page" unless ok
+    end
+
     says = Array(pg.data['pieces']).map(&:to_s)
     says << pg.data['feature'].to_s if pg.data['feature']
     says.each do |s|
