@@ -222,6 +222,11 @@ section.exhibit ~ section.exhibit {
 }
 .xterm-fig.cap-l figcaption { right: 100%; margin-right: 1ch; }
 .xterm-fig.cap-r figcaption { left: 100%; margin-left: 3ch; text-align: left; }
+/* cap figures take the whole column so the caption anchors to the
+   gutter edge not the art edge. inside exhibits the figure stays
+   fit-content or it eats the placard */
+.xterm-fig.cap-l, .xterm-fig.cap-r { width: 100%; }
+section.exhibit .xterm-fig { width: fit-content; }
 /* bottom caption wants one line under the art, wraps only if it cant */
 .xterm-fig.cap-b .cap-t { display: inline; }
 
