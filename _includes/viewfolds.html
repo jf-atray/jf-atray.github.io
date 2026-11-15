@@ -1,5 +1,10 @@
 {% assign vdir = include.dir | default: "/pieces/" %}
 {% assign vpages = site.pages | where_exp: "v", "v.dir == vdir" | sort: "title" %}
+{% if include.family %}
+<ul class="viewlist">
+{% for v in vpages %}{% if v.family == include.family %}<li><a href="{{ v.url | relative_url }}">{{ v.title }}</a></li>{% endif %}{% endfor %}
+</ul>
+{% else %}
 <ul class="viewlist">
 {% for v in vpages %}{% unless v.family %}<li><a href="{{ v.url | relative_url }}">{{ v.title }}</a></li>{% endunless %}{% endfor %}
 </ul>
@@ -13,3 +18,4 @@
 </ul>
 </details>
 {% endfor %}
+{% endif %}
