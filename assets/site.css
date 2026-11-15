@@ -222,6 +222,8 @@ section.exhibit ~ section.exhibit {
 }
 .xterm-fig.cap-l figcaption { right: 100%; margin-right: 1ch; }
 .xterm-fig.cap-r figcaption { left: 100%; margin-left: 3ch; text-align: left; }
+/* bottom caption wants one line under the art, wraps only if it cant */
+.xterm-fig.cap-b .cap-t { display: inline; }
 
 /* museum comments. folded under the piece, open if u care */
 details.comments { margin-top: 2.5ch; font-size: 14px; color: var(--dim); }
