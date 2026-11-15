@@ -191,7 +191,7 @@ module Jekyll
       # folders under art/ work now, name is art-relative. underscore
       # an dot dirs still cant be reached, thats how drafts stay home.
       segs = name.split('/')
-      if segs.any? { |s| s.empty? || s.start_with?('_', '.') }
+      if name.include?('\\') || segs.any? { |s| s.empty? || s.start_with?('_', '.') }
         raise "xterm_file: bad path #{name}"
       end
       path = File.join(site.source, 'art', *segs)
