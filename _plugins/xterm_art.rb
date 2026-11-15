@@ -188,7 +188,13 @@ module Jekyll
       site = context.registers[:site]
       name = @file =~ /\A["'](.*)["']\z/ ? $1 : (context[@file] || @file).to_s
       name = name.sub(/\.(md|txt)\z/, '') + '.txt'
-      path = File.join(site.source, 'art', File.basename(name))
+      # folders under art/ work now, name is art-relative. underscore
+      # an dot dirs still cant be reached, thats how drafts stay home.
+      segs = name.split('/')
+      if segs.any? { |s| s.empty? || s.start_with?('_', '.') }
+        raise "xterm_file: bad path #{name}"
+      end
+      path = File.join(site.source, 'art', *segs)
       unless File.exist?(path)
         raise "xterm_file: no art/#{name}"
       end
@@ -201,7 +207,9 @@ module Jekyll
       # figure wraps pre+caption so flex cant split them. art
       # with no doc stays chrome, an chrome hides from screen
       # readers entirely.
-      doc = XtermArt.doc_for(site, File.basename(name, '.txt'))
+      base = File.basename(name, '.txt')
+      doc = XtermArt.doc_for(site, base)
+      doc ||= XtermArt.doc_for(site, "#{segs[0..-2].join('_')}_#{base}") if segs.length > 1
       unless doc
         return %(<pre class="xterm #{XtermArt.wclass(src)}" aria-hidden="true">#{body}</pre>)
       end
