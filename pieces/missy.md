@@ -10,6 +10,7 @@ one ugnaught, every era. <em>the webmaster writes this intro.</em>
 
 ## the woman
 
+- [under it all]({{ '/pieces/missy-desc-1/' | relative_url }})
 - [pearl-blonde]({{ '/pieces/missy-desc-2/' | relative_url }})
 - [bawdily blonde]({{ '/pieces/missy-desc-3/' | relative_url }})
 
