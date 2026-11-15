@@ -4,7 +4,6 @@ permalink: /pieces/catalogue.html
 parent: /pieces.html
 ---
 
-{% include views.html dir="/pieces/" index="/pieces.html" %}
 
 all of it, by era.
 

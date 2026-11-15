@@ -4,7 +4,6 @@ permalink: /pieces/start-here.html
 parent: /pieces.html
 ---
 
-{% include views.html dir="/pieces/" index="/pieces.html" %}
 
 <section class="exhibit">
   {% xterm_file droid.txt cap:left %}

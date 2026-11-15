@@ -1,0 +1,13 @@
+{% assign vpages = site.pages | where_exp: "v", "v.dir == '/pieces/'" | sort: "title" %}
+<ul class="viewlist">
+{% for v in vpages %}{% unless v.family %}<li><a href="{{ v.url | relative_url }}">{{ v.title }}</a></li>{% endunless %}{% endfor %}
+</ul>
+{% assign fams = vpages | group_by: "family" | sort: "name" %}
+{% for fam in fams %}{% if fam.name %}
+<details class="tagfold">
+<summary>{{ fam.name }}</summary>
+<ul>
+{% for v in fam.items | sort: "title" %}<li><a href="{{ v.url | relative_url }}">{{ v.title }}</a></li>{% endfor %}
+</ul>
+</details>
+{% endif %}{% endfor %}

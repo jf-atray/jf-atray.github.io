@@ -1,10 +1,10 @@
 ---
 title: missy's crafts
 permalink: /pieces/missy-crafts.html
+family: missy
 parent: /pieces.html
 ---
 
-{% include views.html dir="/pieces/" index="/pieces.html" %}
 
 what she made when she wasnt bein made. <em>the webmaster writes this intro.</em>
 

@@ -1,6 +1,7 @@
 ---
 title: missy's datapads
 permalink: /pieces/missy-datapads.html
+family: missy
 parent: /pieces.html
 folds:
   - title: the pads
@@ -13,7 +14,6 @@ folds:
     tag: datapad-loose
 ---
 
-{% include views.html dir="/pieces/" index="/pieces.html" %}
 
 every pad she made, sold, an wore. <em>the webmaster writes this intro.</em>
 

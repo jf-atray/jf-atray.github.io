@@ -3,7 +3,8 @@ title: pieces
 permalink: /pieces.html
 ---
 
-{% include views.html dir="/pieces/" index="/pieces.html" %}
+the views:
+{% include viewfolds.html %}
 
 Even after the advent of 24bit, I'm still quite comfortable in 256. Hey, sometimes 16 color.
 So, the context of these arts. In a game like a MUD, it all comes down to the written.

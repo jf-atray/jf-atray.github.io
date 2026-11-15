@@ -1,10 +1,10 @@
 ---
 title: missy's sagas
 permalink: /pieces/missy.html
+family: missy
 parent: /pieces.html
 ---
 
-{% include views.html dir="/pieces/" index="/pieces.html" %}
 
 one ugnaught, every era. <em>the webmaster writes this intro.</em>
 
