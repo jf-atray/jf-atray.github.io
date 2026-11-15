@@ -5,17 +5,18 @@ permalink: /pieces.html
 
 {% include views.html dir="/pieces/" index="/pieces.html" %}
 
-ascii art in the color language of a mud the webmaster plays. real text,
-u can select it an everything. {{ site.pieces | size }} pieces,
-all on one level.
+Even after the advent of 24bit, I'm still quite comfortable in 256. Hey, sometimes 16 color.
+So, the context of these arts. In a game like a MUD, it all comes down to the written.
+In this realm, things are created, described, and passed from story to story.
+If they're good, we can use color to communicate too.
+Enjoy!
 
 <section class="exhibit">
   {% xterm_file droid.txt cap:left %}
   <div class="placard">
-    <h3>for lack of any polish</h3>
-    <p>a poem about a droid in the droids own colors. the site got
-    built to hang it.</p>
+    <h3>T3-J2, the refurbished utility droid</h3>
+    <p></p>
   </div>
 </section>
 
-first time here, [start here]({{ '/pieces/start-here.html' | relative_url }}).
+ [start here]({{ '/pieces/start-here.html' | relative_url }}).
