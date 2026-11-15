@@ -1,4 +1,5 @@
 ---
+tags: [missy]
 title: bureaucratic posters
 comments:
   - who: toast

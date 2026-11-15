@@ -1,4 +1,5 @@
 ---
+tags: [missy]
 title: the art of you
 comments:
   - who: toast

@@ -1,4 +1,5 @@
 ---
+tags: [missy, paper, missy-character]
 title: retail and imports
 comments:
   - who: toast

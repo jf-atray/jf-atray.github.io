@@ -1,4 +1,5 @@
 ---
+tags: [missy, paper, missy-character]
 title: no doubts
 comments:
   - who: toast

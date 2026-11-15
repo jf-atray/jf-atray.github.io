@@ -1,4 +1,5 @@
 ---
+tags: [missy, paper, missy-character]
 title: to whom it may concern
 comments:
   - who: toast

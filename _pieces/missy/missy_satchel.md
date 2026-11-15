@@ -1,4 +1,5 @@
 ---
+tags: [missy]
 title: the crossbody satchel
 comments:
   - who: toast

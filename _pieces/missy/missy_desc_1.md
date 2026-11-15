@@ -1,4 +1,5 @@
 ---
+tags: [missy, missy-character]
 title: under it all
 comments:
   - who: toast

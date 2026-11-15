@@ -1,4 +1,5 @@
 ---
+tags: [missy, wearing, missy-character]
 title: buckle-strap
 comments:
   - who: toast

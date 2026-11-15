@@ -1,4 +1,5 @@
 ---
+tags: [missy]
 title: im on 1972
 comments:
   - who: toast

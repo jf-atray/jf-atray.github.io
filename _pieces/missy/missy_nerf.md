@@ -1,5 +1,5 @@
 ---
-tags: [wearing, datapad-worn]
+tags: [wearing, datapad-worn, missy, wearing, missy-character]
 title: nerf-herder hat
 comments:
   - who: toast

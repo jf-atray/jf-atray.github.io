@@ -1,5 +1,5 @@
 ---
-tags: [datapad-trade]
+tags: [datapad-trade, missy]
 title: data pro
 comments:
   - who: toast

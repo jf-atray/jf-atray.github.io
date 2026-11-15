@@ -1,4 +1,5 @@
 ---
+tags: [missy]
 title: the merc scoutcap
 comments:
   - who: toast

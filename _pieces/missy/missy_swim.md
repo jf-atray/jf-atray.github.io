@@ -1,4 +1,5 @@
 ---
+tags: [missy, wearing, missy-character]
 title: ungodly tight
 comments:
   - who: toast

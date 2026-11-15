@@ -1,4 +1,5 @@
 ---
+tags: [missy, wearing, missy-character]
 title: worryingly short
 comments:
   - who: toast

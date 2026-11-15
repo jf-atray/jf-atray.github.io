@@ -1,4 +1,5 @@
 ---
+tags: [missy, missy-character]
 title: bawdily blonde
 comments:
   - who: toast

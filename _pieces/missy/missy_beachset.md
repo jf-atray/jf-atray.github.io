@@ -1,4 +1,5 @@
 ---
+tags: [missy]
 title: the party furniture
 comments:
   - who: toast
