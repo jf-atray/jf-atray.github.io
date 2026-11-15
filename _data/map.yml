@@ -13,15 +13,15 @@
     - name: catalogue
       url: /pieces/catalogue.html
       note: the whole record
-    - name: missy's sagas
+    - name: Missy's character
       url: /pieces/missy.html
-      note: one woman, every era
-    - name: missy's crafts
-      url: /pieces/missy-crafts.html
-      note: what the woman made
-    - name: missy's datapads
+      note: Two years of Miss Piggy
+    - name: Missy's datapads
       url: /pieces/missy-datapads.html
-      note: made em, sold em, wore em
+      note: Ipads were Missy's majority design.
+    - name: Missy's misc. creations
+      url: /pieces/missy-crafts.html
+      note: Most my assorted 2024-2026 creations.
 - name: posts
   url: /posts.html
   note: the words
