@@ -1,5 +1,6 @@
-{% assign tagged = site.pieces | where_exp: "p", "p.tags contains include.tag" | sort: "title" %}
-<details class="tagfold"{% if include.open %} open{% endif %}>
+{% assign of = include.of | default: "pieces" %}
+{% assign tagged = site[of] | where_exp: "p", "p.tags contains include.tag" | sort: "title" %}
+<details class="fold{% if include.bar %} foldbar{% endif %}"{% if include.open %} open{% endif %}>
 <summary>{{ include.title | default: include.tag }}</summary>
 <ul>
 {% for p in tagged %}<li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>{% endfor %}

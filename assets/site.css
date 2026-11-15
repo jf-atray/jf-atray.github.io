@@ -319,10 +319,13 @@ ul.viewlist { display: inline; margin: 0; padding: 0; list-style: none; }
 ul.viewlist li { display: inline; }
 ul.viewlist li + li::before { content: " . "; color: var(--dimmer); }
 
-details.tagfold { display: inline-block; position: relative; margin: 0 1ch 0 0; vertical-align: top; }
-details.tagfold summary { cursor: pointer; color: var(--amber-dim); list-style: none; }
-details.tagfold summary::-webkit-details-marker { display: none; }
-details.tagfold summary::after { content: " +"; }
-details.tagfold[open] summary::after { content: " -"; }
-details.tagfold ul { position: absolute; left: 0; top: 100%; min-width: 22ch; margin: 0; padding: .4ch 1ch; list-style: none; background: var(--panel); border: var(--hairline); z-index: 5; }
-details.tagfold li { white-space: nowrap; }
+details.fold { margin: .8ch 0; }
+details.fold summary { cursor: pointer; color: var(--amber-dim); list-style: none; }
+details.fold summary::-webkit-details-marker { display: none; }
+details.fold summary::after { content: " +"; }
+details.fold[open] summary::after { content: " -"; }
+details.fold ul { list-style: none; margin: .5ch 0 0 1ch; padding: 0; }
+
+details.foldbar { display: inline-block; position: relative; margin: 0 1ch 0 0; vertical-align: top; }
+details.foldbar ul { position: absolute; left: 0; top: 100%; min-width: 22ch; margin: 0; padding: .4ch 1ch; background: var(--panel); border: var(--hairline); z-index: 5; }
+details.foldbar li { white-space: nowrap; }
