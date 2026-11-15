@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: nicolas jod'eward
 comments:
   - who: toast

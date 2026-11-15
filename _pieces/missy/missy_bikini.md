@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: buckle-strap
 comments:
   - who: toast

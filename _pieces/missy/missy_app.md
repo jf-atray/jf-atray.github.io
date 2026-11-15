@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: to whom it may concern
 comments:
   - who: toast

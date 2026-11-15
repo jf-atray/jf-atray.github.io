@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: southwest by northeast
 comments:
   - who: toast

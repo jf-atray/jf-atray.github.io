@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: the party furniture
 comments:
   - who: toast

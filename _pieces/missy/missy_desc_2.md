@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: pearl-blonde
 comments:
   - who: toast

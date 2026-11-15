@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: the art of you
 comments:
   - who: toast

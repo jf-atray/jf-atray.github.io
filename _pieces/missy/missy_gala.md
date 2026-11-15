@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: worryingly short
 comments:
   - who: toast

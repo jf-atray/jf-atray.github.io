@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: flip-links, first run
 comments:
   - who: toast

@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: nerf-herder hat
 comments:
   - who: toast

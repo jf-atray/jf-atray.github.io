@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: a great quantity of sand
 comments:
   - who: toast

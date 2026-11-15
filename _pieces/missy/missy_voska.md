@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: im on 1972
 comments:
   - who: toast

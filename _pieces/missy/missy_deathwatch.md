@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: the deathwatch pair
 comments:
   - who: toast

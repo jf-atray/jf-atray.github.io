@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: bacta 657
 comments:
   - who: toast

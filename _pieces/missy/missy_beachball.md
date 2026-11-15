@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: jawa-sized beach ball
 comments:
   - who: toast

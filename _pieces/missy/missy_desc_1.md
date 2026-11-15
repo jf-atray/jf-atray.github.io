@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: under it all
 comments:
   - who: toast

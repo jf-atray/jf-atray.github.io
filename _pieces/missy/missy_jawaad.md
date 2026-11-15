@@ -1,5 +1,4 @@
 ---
-era: 24-26
 title: hi queen
 comments:
   - who: toast
