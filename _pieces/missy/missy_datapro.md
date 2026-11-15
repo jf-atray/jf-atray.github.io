@@ -1,4 +1,5 @@
 ---
+tags: [datapad-trade]
 title: data pro
 comments:
   - who: toast

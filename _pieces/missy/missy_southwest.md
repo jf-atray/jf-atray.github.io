@@ -1,4 +1,5 @@
 ---
+tags: [datapad-trade]
 title: southwest by northeast
 comments:
   - who: toast

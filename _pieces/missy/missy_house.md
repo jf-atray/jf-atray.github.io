@@ -1,4 +1,5 @@
 ---
+tags: [datapad-loose]
 title: the pillow pile
 comments:
   - who: toast

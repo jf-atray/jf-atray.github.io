@@ -1,4 +1,5 @@
 ---
+tags: [wearing, datapad-worn]
 title: prim
 comments:
   - who: toast

@@ -1,4 +1,5 @@
 ---
+tags: [datapad]
 title: buzzfish
 comments:
   - who: toast

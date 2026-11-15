@@ -1,4 +1,5 @@
 ---
+tags: [datapad]
 title: dataranger
 comments:
   - who: toast

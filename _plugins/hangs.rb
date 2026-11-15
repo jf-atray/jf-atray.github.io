@@ -27,6 +27,11 @@ Jekyll::Hooks.register :site, :post_read do |site|
       end
     end
 
+    Array(pg.data['folds']).each do |f|
+      t = (f.is_a?(Hash) ? f['tag'] : f).to_s
+      pcs.each { |d| put.call(d, pg) if Array(d.data['tags']).map(&:to_s).include?(t) }
+    end
+
     pg.content.to_s.scan(/\{%\s*xterm_file\s+["']?([^"'%}\s]+)/) do |(raw)|
       s = File.basename(raw).sub(/\.(md|txt)\z/, '')
       put.call(own[s], pg) if own.key?(s)

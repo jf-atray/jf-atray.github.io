@@ -1,4 +1,5 @@
 ---
+tags: [wearing, datapad-worn]
 title: nerf-herder hat
 comments:
   - who: toast

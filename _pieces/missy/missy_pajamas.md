@@ -1,4 +1,5 @@
 ---
+tags: [wearing, datapad-worn]
 title: bogling pajamas
 comments:
   - who: toast
