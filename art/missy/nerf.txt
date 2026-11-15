@@ -1,0 +1,7 @@
+&wMissy is wearing:
+&021 <&051worn on head&021>      &wa wide brimmed nerf-herder hat with cutouts for ears
+&021 <&051worn on body&021>      &wworn leather overalls and a vintage holoband tunic
+&021 <&051worn on held&021>      &wa glam pop-theme datapad with additional wiring
+&021 <&051worn on ears&021>      &wa set of opalescent hoops with gaudy appeal
+&021 <&051worn on over&021>      &095an aged leat&138her coat &059and &217fluffy collar 
+

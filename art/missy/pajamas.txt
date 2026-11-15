@@ -1,0 +1,8 @@
+&wMissy is wearing:
+&021 <&051worn on over&021>      &111a &062but&068toned &137Bog&138l&131ing &211plush &111pajama&068-&075cost&069ume
+&021 <&051worn on head&021>      &111a &068plush &137Bog&138l&131ing &111hood &068with &138en&174or&210mous e&174a&138rs
+&021 <&051worn on feet&021>      &219bare feet and painted toes
+&021 <&051worn on held&021>      &111a &068folding &117digi&111t&110e&109rm&110in&111al &149cl&150ad &222in &213sti&212ckers
+&021 <&051worn on ears&021>      &111a &117g&Wl&195i&159t&117t&111e&117r&195i&159n&117g &068set of &111over&068-&111ear &150headph&149ones
+&021 <&051worn on back&021>      &138a &206t&207h&213e&219r&225maf&219l&213e&207e&206ce &138under&095-&138apron &095undergarment
+

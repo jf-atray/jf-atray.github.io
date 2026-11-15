@@ -1,0 +1,7 @@
+&wMissy is wearing:
+ &W<[worn on body>      &026an &033ungodly &026tight &033onepiece swimsuit
+ &W<[worn on head>      &Ybl&228on&229de &Yhair &190tied into &Ytwo pigtails
+ &W<[worn on feet>      &098a &098set &097of &206lo&207ud &098flexiplast &206flipflops
+ &W<[worn on eyes>      &098a pair &097of &207pink &206goggles &098and &206snorkel
+ &W<[worn about waist>  &230a wrap&229-around &219fri&222l&Yly &084flo&079w&075er &230sarong
+

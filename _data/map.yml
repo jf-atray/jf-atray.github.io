@@ -13,6 +13,12 @@
     - name: catalogue
       url: /pieces/catalogue.html
       note: the whole record
+    - name: missy's sagas
+      url: /pieces/missy.html
+      note: one woman, every era
+    - name: missy's crafts
+      url: /pieces/missy-crafts.html
+      note: what the woman made
 - name: posts
   url: /posts.html
   note: the words

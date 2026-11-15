@@ -1,0 +1,21 @@
+&wAccessing Sith Empire Database....
+....
+....
+&r=======================  &244Information  &r=======================
+         &wName&244: Maury Peggy
+&wKnown Aliases&244: &221Missy
+&196      &wSpecies&244: Ugnaught
+&196    &wHomeworld&244: Gentes, Anoat
+&196   &wOccupation&244: Retail and Imports
+&r==================== &244Employment  History &r====================
+&wEmployer&244: 
+&196   &wTitle&244: 
+&r====================  &244Biographical Data  &r====================
+&wMissy graduated with celebrated honors from a prestigious
+university on Lorrd. An immigrant from the Anoat system, she
+breezed through entirely paid, accumulating a series of Sith
+accolades on the way. Now, the Ugnuaght is well known online
+on the datanet by her popular mononym 'Missy', where she has
+been involved in many cracks and distribution of copyrighted
+materials: frequently vintage holo-films.
+&r=============================================================

@@ -1,0 +1,8 @@
+&wMissy is wearing:
+&021 <&051worn on over&021>      &212a g&218a&219r&225gant&219u&218a&212n fluffy boa scarf &175in &213all shades &176of &213pink
+&021 <&051worn on head&021>      &159a s&195i&231lver circl&195e&159t that &229holo&159proj&121ects &213cartoon hearts
+&021 <&051worn on feet&021>      &110a set of &159g&195lass &231high &195heel&159s &110with &231a&121nim&231al &Wst&229icke&Wrs
+&021 <&051worn on held&021>      &212a &218clasped &212fluffy purse &231st&195ru&159n&159g upon a chain
+&021 <&051worn on ears&021>      &153a gaudy set &110of &153op&189a&183les&182c&152e&158nt &153pearl hoops
+&021 <&051worn on eyes&021>      &172a pair &172of &214r&221e&222flecti&221v&214e &214sunglasses
+&021 <&051worn on back&021>      &153a &231worryingly &153short dress

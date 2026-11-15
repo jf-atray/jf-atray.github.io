@@ -1,0 +1,9 @@
+&wMissy is wearing:
+&w [worn on over>      &160a &197&Iprim&D &160hip&124-&160length &124cor&160po&161rate &196comp&196any blazer
+&w [worn on head>      &221a well &220manicured &221mop &220of &Ylong hanging hair
+&w [worn on feet>      &196a &196couple &124of &196click&124-&196y &201bo&200urg&206eo&212i&213s &206high heels
+&w [worn on eyes>      &208a r&214o&220u&195nd pa&Wir of &221thick &195gla&Wss focus-&220ri&214m&208s
+&w [worn on held>      &206a folding &197dig&198i&199t&201er&200m&206i&212nal &149wi&150th &222st&223ic&111ke&110rs
+&w [worn on ears>      &231a &231set &254of &208g&214a&220u&221dy gold h&220o&214o&208p &231e&255a&254rrings
+&w [worn on back>      &231a crumply &225far&218-&212too&212-&218th&225in &231blouse
+

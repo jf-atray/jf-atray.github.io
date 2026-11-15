@@ -1,0 +1,8 @@
+&wMissy is wearing:
+ &W<[worn on body>      &225a &Wbuck&225l&219e&W-&219s&225t&Wrapped &Wbikini &225top
+ &W<[worn on head>      &180a &187massively &180flo&179p&178py sunhat
+ &W<[worn on feet>      &180two stringy mou&179s&178y sandals
+ &W<[worn on legs>      &105a set &098of &105tum-high &110denim jeans
+ &W<[held>              &Wa &220jawa&220-&221sized &075inflat&069able &202bea&203ch &Wball
+ &W<[worn over body>    &229a &225sheer &229shell-stitch c&228rochet &229shawl
+
