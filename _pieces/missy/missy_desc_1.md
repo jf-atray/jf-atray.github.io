@@ -5,4 +5,4 @@ comments:
   - who: toast
     text: the first desc. perm, tusks, reckless makeup, jittery. most of her was already in there
 ---
-{% xterm_file missy/desc_1.txt %}
+{% xterm_file missy/desc_2.txt %}
