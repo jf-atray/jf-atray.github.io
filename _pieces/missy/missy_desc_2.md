@@ -1,5 +1,5 @@
 ---
-tags: [missy, missy-character]
+tags: [missy, missy-character, desc]
 title: pearl-blonde
 comments:
   - who: toast
