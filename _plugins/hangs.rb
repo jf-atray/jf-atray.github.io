@@ -28,8 +28,13 @@ Jekyll::Hooks.register :site, :post_read do |site|
     end
 
     Array(pg.data['folds']).each do |f|
-      t = (f.is_a?(Hash) ? f['tag'] : f).to_s
-      pcs.each { |d| put.call(d, pg) if Array(d.data['tags']).map(&:to_s).include?(t) }
+      t = (f.is_a?(Hash) ? f['tag'] : f).to_s.split('&').map(&:strip)
+      pcs.each { |d| put.call(d, pg) if (t - Array(d.data['tags']).map(&:to_s)).empty? }
+    end
+
+    pg.content.to_s.scan(/\{%\s*include\s+tagfold\.html\s+tag=["']([^"']+)/) do |(raw)|
+      t = raw.split('&').map(&:strip)
+      pcs.each { |d| put.call(d, pg) if (t - Array(d.data['tags']).map(&:to_s)).empty? }
     end
 
     pg.content.to_s.scan(/\{%\s*xterm_file\s+["']?([^"'%}\s]+)/) do |(raw)|
