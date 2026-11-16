@@ -33,7 +33,7 @@ Jekyll::Hooks.register :site, :post_read do |site|
     end
 
     pg.content.to_s.scan(/\{%\s*xterm_file\s+["']?([^"'%}\s]+)/) do |(raw)|
-      s = File.basename(raw).sub(/\.(md|txt)\z/, '')
+      s = File.basename(raw).sub(/\.(md|txt)\z/, '').tr('-', '_')
       put.call(own[s], pg) if own.key?(s)
     end
   end
