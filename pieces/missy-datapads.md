@@ -1,5 +1,5 @@
 ---
-title: missy's datapads
+title: Missy's datapads
 permalink: /pieces/missy-datapads.html
 family: missy
 parent: /pieces.html
@@ -15,7 +15,7 @@ folds:
 ---
 
 
-every pad she made, sold, an wore. <em>the webmaster writes this intro.</em>
+
 
 {% for f in page.folds %}
 {% include tagfold.html tag=f.tag title=f.title %}

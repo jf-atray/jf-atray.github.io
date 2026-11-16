@@ -1,5 +1,5 @@
 ---
-title: missy's crafts
+title: Missy's misc. creations
 permalink: /pieces/missy-crafts.html
 family: missy
 parent: /pieces.html
