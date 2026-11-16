@@ -22,6 +22,8 @@ Additionally, in my art, I'd finally fallen out of love of dark/light/alt stripe
 
   {% xterm_file missy/desc_3.txt cap:right %}
 
+Missy didn't get up to a lot Era 3, actually, but I think this is an excellent piece "about" her character, her motivations and her story. I wanted people who'd known her as a figure of trust and authority to do a double take. From all her riches selling weapons, Maury Peggy moved on to a beautique and spa.
+
 {% include tagfold.html tag="desc & missy" title="Descriptions" %}
 {% include tagfold.html tag="wearing & missy" title="MakeClothing" %}
 {% include tagfold.html tag="paper & missy" title="Messages" %}

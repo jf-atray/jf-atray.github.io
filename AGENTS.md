@@ -21,15 +21,14 @@ dont ghostwrite the webmaster.
 
 jekyll 4 site. the art renderer is `_plugins/xterm_art.rb`
 (`{% xterm %}` inline, `{% xterm_file x.txt %}` from `art/`).
-pieces r a flat collection in `_pieces/`, curated views r
-loose files in `pieces/`.
+pieces r a collection in `_pieces/`, nested per character,
+curated views r loose files in `pieces/`.
 
-`art/` is finished renderable work only. process material,
-drafts, frameworks, discovery notes go in `art/_drafts/`:
-the renderer cant reach it there (basename lookup) an jekyll
-wont publish it (underscore dir). split files at the authors
-own divider walls. `notes/` is excluded from the build, more
-process junk can stay there.
+`art/` is finished renderable work only, in folders per
+character. no drafts — process material, frameworks,
+discovery notes stay out of the repo or in `notes/`,
+which is excluded from the build. split files at the
+authors own divider walls.
 
 art lines over `xterm_max_width` (80 in config) warn at
 build. set `xterm_max_strict: true` to make em fail instead.
