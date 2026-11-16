@@ -1,8 +1,8 @@
 ---
-era: 24-26
+tags: [pauli]
 title: pauli, in verse
 comments:
   - who: toast
     text: hes a himbo an i like him
 ---
-{% xterm_file pauli.txt %}
+{% xterm_file pauli/pauli.txt %}

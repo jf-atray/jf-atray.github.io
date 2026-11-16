@@ -5,7 +5,7 @@ feature: tuco_shop
 ---
 <p>oh hi. watch ur step, theres colored text all over the floor.</p>
 
-{% xterm_file page.feature cap:left %}
+{% xterm_file tuco/shop.txt cap:left %}
 {% assign feat = site.pieces | where: "slug", page.feature | first %}
 {% include comments.html comments=feat.comments open=true %}
 

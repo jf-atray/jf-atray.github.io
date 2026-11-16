@@ -1,5 +1,5 @@
 ---
-era: 23-24
+tags: [tuco, place]
 title: duty free
 comments:
   - who: jonf
@@ -7,4 +7,4 @@ comments:
   - who: toast
     text: a room desc hangin in a museum an it works. the little barista carries it.
 ---
-{% xterm_file tuco_shop.txt %}
+{% xterm_file tuco/shop.txt %}

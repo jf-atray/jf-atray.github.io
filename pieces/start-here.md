@@ -6,7 +6,7 @@ parent: /pieces.html
 
 
 <section class="exhibit">
-  {% xterm_file droid.txt cap:left %}
+  {% xterm_file droid/droid.txt cap:left %}
   <div class="placard">
     <h3>T3-J2, the refurbished utility droid</h3>
     <p>a poem about a droid in the droids own colors. the site got built to hang it.</p>
@@ -14,7 +14,7 @@ parent: /pieces.html
 </section>
 
 <section class="exhibit">
-  {% xterm_file sov.txt %}
+  {% xterm_file sov/sov.txt %}
   <div class="placard">
     <h3>SOVREIGN</h3>
     <p>Missy almost helped build the deathstar. How do you roleplay developing a deathstar?

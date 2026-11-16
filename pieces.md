@@ -13,7 +13,7 @@ If they're good, we can use color to communicate too.
 Enjoy!
 
 <section class="exhibit">
-  {% xterm_file droid.txt cap:left %}
+  {% xterm_file droid/droid.txt cap:left %}
   <div class="placard">
     <h3>T3-J2, the refurbished utility droid</h3>
     <p></p>
