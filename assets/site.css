@@ -190,7 +190,10 @@ pre.xterm.w-l { font-size: 14px; }
 /* overdraw: inline padding paints bg past the line box,
    killing hairline stripes between backgrounded rows */
 pre.xterm b { padding: 1px 0; }
-pre.xterm .it { font-style: italic; }
+/* italic glyphs overhang their cell an the next spans bg
+   would paint over em. position:relative lifts the slanted
+   text above its neighbors backgrounds, grid untouched */
+pre.xterm .it { font-style: italic; position: relative; }
 pre.xterm .ul { text-decoration: underline; }
 pre.xterm .kw { color: var(--amber); }
 /* a piece treated as an image: art on one side, its placard on the other.
