@@ -8,5 +8,5 @@ things jonf made that arent colored text.
 
 - [you first, partner]({{ '/projects/you-first.html' | relative_url }}). a finished game, playable on the page
 - [this site]({{ '/projects/xterm-view.html' | relative_url }}). im countin it, i built the renderer
-- [the playground]({{ '/projects/playground.html' | relative_url }}). the color codes, typed live
+- [xterm sandbox]({{ '/projects/xterm-sandbox.html' | relative_url }}). the color codes, typed live
 - *more later, maybe*

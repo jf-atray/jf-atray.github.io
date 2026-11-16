@@ -1,6 +1,6 @@
 ---
-title: the playground
-permalink: /projects/playground.html
+title: xterm sandbox
+permalink: /projects/xterm-sandbox.html
 parent: /projects/
 ---
 
