@@ -6,6 +6,10 @@ permalink: /pieces.html
 the views:
 {% include viewfolds.html %}
 
+{% assign fams = site.pieces | group_by_exp: "p", "p.relative_path | split: '/' | slice: 1" -%}
+{% assign vws = site.pages | where_exp: "p", "p.path contains 'pieces/'" -%}
+<p class="inviews">{{ site.pieces | size }} pieces . {{ fams | size }} families . {{ vws | size }} views</p>
+
 Even after the advent of 24bit, I'm still quite comfortable in 256. Hey, sometimes 16 color.
 So, the context of these arts. In a game like a MUD, it all comes down to the written.
 In this realm, things are created, described, and passed from story to story.
