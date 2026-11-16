@@ -17,11 +17,6 @@ pronouns they got, thats fiction an hands off.
 the placeholders that ask for jonfs words r jonfs to write.
 dont ghostwrite the webmaster.
 
-## commits
-
-invoke the commit-voice skill before every git commit.
-it carries the subjcet rules an the trailer.
-
 ## shape
 
 jekyll 4 site. the art renderer is `_plugins/xterm_art.rb`
