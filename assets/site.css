@@ -93,7 +93,7 @@ main { display: flex; flex-wrap: wrap; gap: 24ch; align-items: flex-start; }
   .rail { width: 100%; border-left: 0; border-top: var(--hairline);
           padding-left: 0; padding-top: 2ch; }
   /* no rail line to be flush with when the rail stacks */
-  header pre.xterm { margin-right: 0; }
+  header { padding-right: 0; }
 }
 
 /* the banners field continues down the page edges on wide
@@ -142,11 +142,15 @@ header {
   gap: 1ch 3ch;
   border-bottom: var(--hairline-warm); /* the one colored line */
   margin-bottom: 3ch;
+  /* the header has the rails width on the right. the rail is
+     31ch of 14px georgia, the header has the same face at 16,
+     so a rail ch is .875 of a header ch an 31 of em is 27.125.
+     the pre is mono, a ch there is a different width */
+  padding-right: calc(27.125ch + 1px);
 }
-/* the art stands with its feet on the line an its right edge
-   flush against the rails left border — margin-right is the
-   rails own width so it tracks at any window size */
-header pre.xterm { margin: 0 calc(31ch + 1px) 0 auto; }
+/* the arts right edge is 1.2em right of the rails left border,
+   its bottom .6em below the warm line. em is the arts own unit */
+header pre.xterm { margin: 0 -1.2em -0.6em auto; }
 
 nav {
   margin: 1ch 0 0;
