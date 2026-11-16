@@ -338,3 +338,23 @@ details.foldbar summary { display: inline; }
 details.foldbar ul { position: absolute; left: 0; top: 100%; min-width: 22ch; margin: 0; padding: .4ch 1ch; background: var(--panel); border: var(--hairline); z-index: 5; }
 details.foldbar li { white-space: nowrap; }
 ul.viewlist ~ details.foldbar::before { content: " . "; color: var(--dimmer); }
+
+/* playground. codes left render right when the bleed field
+   has room, stacked codes-over-render when it dont. the
+   figures wear cap labels so the mirror reads out loud */
+#play { display: flex; flex-wrap: wrap; gap: 2ch 3ch; align-items: flex-start; }
+#play figure { margin: 0; }
+.play-codes { flex: 1 1 34ch; min-width: 26ch; }
+.play-render { flex: 0 1 auto; min-width: 0; }
+#play-in {
+  width: 100%;
+  box-sizing: border-box;
+  background: #111;
+  color: #ccc;
+  border: 1px solid #444;
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.5ch 1ch;
+}
+#play-in:focus { border-color: #888; outline: none; }
+.playstat { display: block; }

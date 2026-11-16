@@ -35,6 +35,9 @@
     - name: xterm-view
       url: /projects/xterm-view.html
       note: this site, as a project
+    - name: the playground
+      url: /projects/playground.html
+      note: type color codes, watch em render
 - name: about
   url: /about/
   note: who
